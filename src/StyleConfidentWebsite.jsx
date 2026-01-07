@@ -235,6 +235,7 @@ const StyleConfidentWebsite = () => {
           .ms-header { flex-direction: column !important; text-align: center !important; }
           .ms-quote { max-width: 100% !important; text-align: center !important; }
           .about-credentials { justify-content: center !important; }
+          .follow-grid { grid-template-columns: 1fr !important; }
         }
 
         @media (max-width: 600px) {
@@ -1152,137 +1153,181 @@ const StyleConfidentWebsite = () => {
                 }}>{item.value}</p>
               </div>
             ))}
-            <a
-              href="https://www.instagram.com/iamkellyhw.thestylist/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '10px 20px',
-                backgroundColor: 'transparent',
-                border: `1.5px solid ${p.primary}`,
-                borderRadius: '24px',
-                textDecoration: 'none',
-                transition: 'all 0.3s ease',
-                marginLeft: 'auto'
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = p.primary; e.currentTarget.querySelector('span').style.color = p.secondary; e.currentTarget.querySelector('svg').style.fill = p.secondary; }}
-              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.querySelector('span').style.color = p.primary; e.currentTarget.querySelector('svg').style.fill = p.primary; }}
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill={p.primary} style={{ transition: 'fill 0.3s ease' }}>
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-              <span style={{
-                fontFamily: "'Libre Franklin', sans-serif",
-                fontSize: '11px',
-                fontWeight: '600',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: p.primary,
-                transition: 'color 0.3s ease'
-              }}>Follow Along</span>
-            </a>
           </div>
         </div>
       </section>
 
-      {/* As Featured Section */}
+      {/* Follow Along Section */}
       <section className="section-padding" style={{
         backgroundColor: p.background,
-        padding: '70px 80px',
+        padding: '80px 80px',
         borderTop: `1px solid ${p.secondary}`,
         borderBottom: `1px solid ${p.secondary}`
       }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          {/* Header */}
-          <div className="ms-header" style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginBottom: '32px',
-            flexWrap: 'wrap',
-            gap: '20px'
-          }}>
-            <div className="ms-quote" style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '20px',
-              flexWrap: 'wrap',
-              justifyContent: 'center'
+          {/* Section Header */}
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <p style={{
+              fontFamily: "'Libre Franklin', sans-serif",
+              fontSize: '11px',
+              fontWeight: '600',
+              letterSpacing: '0.25em',
+              textTransform: 'uppercase',
+              color: p.accent1,
+              marginBottom: '14px'
+            }}>Follow Along</p>
+            <h2 className="section-title" style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: '42px',
+              fontWeight: '500',
+              color: p.primary,
+              marginBottom: '16px'
+            }}>Let's Connect</h2>
+            <p style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: '20px',
+              color: p.neutral,
+              maxWidth: '550px',
+              margin: '0 auto'
             }}>
-              <div className="ms-logo" style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: '42px',
-                fontWeight: '700',
-                color: p.primary,
-                letterSpacing: '-0.02em'
-              }}>M&S</div>
-              <div>
-                <p className="ms-quote-text" style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: '20px',
-                  fontStyle: 'italic',
-                  color: p.neutral,
-                  lineHeight: '1.5',
-                  marginBottom: '6px'
-                }}>
-                  "When I'm not styling clients privately, I'm the official
-                  personal stylist for <strong style={{ fontStyle: 'normal', color: p.primary }}>M&S Battersea</strong> — you can find me on their TikTok channel"
-                </p>
-                <p style={{
-                  fontFamily: "'Libre Franklin', sans-serif",
-                  fontSize: '12px',
-                  letterSpacing: '0.05em',
-                  color: p.neutralLight
-                }}>Battersea Power Station, London</p>
-              </div>
-            </div>
+              For daily style tips, outfit inspiration, and behind-the-scenes of my styling sessions
+            </p>
           </div>
 
-          {/* TikTok Videos Grid */}
-          <div className="tiktok-grid" style={{
+          {/* Two Column Layout */}
+          <div className="follow-grid" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '20px'
+            gridTemplateColumns: '1fr 1fr',
+            gap: '40px',
+            alignItems: 'start'
           }}>
-            {[
-              { id: '7572627145680293142', label: 'Style Session' },
-              { id: '7537032278430567702', label: 'Outfit Ideas' },
-              { id: '7527361142008679702', label: 'Fashion Tips' }
-            ].map((video, i) => (
-              <a
-                key={i}
-                href={`https://www.tiktok.com/@mandsbatterseafashion/video/${video.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '12px',
-                  textDecoration: 'none',
-                  padding: '20px 24px',
-                  backgroundColor: p.secondary,
-                  borderRadius: '12px',
-                  transition: 'all 0.3s ease'
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 12px 28px rgba(0,0,0,0.12)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
-              >
-                {/* TikTok icon */}
+            {/* M&S TikTok Column */}
+            <div style={{
+              backgroundColor: p.secondary,
+              borderRadius: '20px',
+              padding: '32px'
+            }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '16px',
+                marginBottom: '20px'
+              }}>
+                <div className="ms-logo" style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: '32px',
+                  fontWeight: '700',
+                  color: p.primary,
+                  letterSpacing: '-0.02em'
+                }}>M&S</div>
+                <div>
+                  <p style={{
+                    fontFamily: "'Libre Franklin', sans-serif",
+                    fontSize: '12px',
+                    fontWeight: '600',
+                    color: p.primary
+                  }}>Official Personal Stylist</p>
+                  <p style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: '14px',
+                    color: p.neutral
+                  }}>Battersea Power Station</p>
+                </div>
+              </div>
+
+              <p className="ms-quote-text" style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: '17px',
+                fontStyle: 'italic',
+                color: p.neutral,
+                lineHeight: '1.6',
+                marginBottom: '24px'
+              }}>
+                "When I'm not styling clients privately, I'm the official personal stylist
+                for M&S Battersea — catch me on their TikTok channel!"
+              </p>
+
+              {/* TikTok Videos */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                {[
+                  { id: '7572627145680293142', label: 'Style Session' },
+                  { id: '7537032278430567702', label: 'Outfit Ideas' },
+                  { id: '7527361142008679702', label: 'Fashion Tips' }
+                ].map((video, i) => (
+                  <a
+                    key={i}
+                    href={`https://www.tiktok.com/@mandsbatterseafashion/video/${video.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      textDecoration: 'none',
+                      padding: '14px 18px',
+                      backgroundColor: p.background,
+                      borderRadius: '10px',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(4px)'; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; }}
+                  >
+                    <div style={{
+                      width: '36px',
+                      height: '36px',
+                      borderRadius: '50%',
+                      backgroundColor: '#000',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0
+                    }}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                      </svg>
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <p style={{
+                        fontFamily: "'Libre Franklin', sans-serif",
+                        fontSize: '12px',
+                        fontWeight: '600',
+                        color: p.primary
+                      }}>{video.label}</p>
+                    </div>
+                    <span style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      fontSize: '14px',
+                      color: p.neutral
+                    }}>Watch →</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Instagram Column */}
+            <div style={{
+              backgroundColor: p.primary,
+              borderRadius: '20px',
+              padding: '32px',
+              color: p.secondary
+            }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '14px',
+                marginBottom: '20px'
+              }}>
                 <div style={{
-                  width: '44px',
-                  height: '44px',
-                  borderRadius: '50%',
-                  backgroundColor: '#000',
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">
-                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                   </svg>
                 </div>
                 <div>
@@ -1290,17 +1335,81 @@ const StyleConfidentWebsite = () => {
                     fontFamily: "'Libre Franklin', sans-serif",
                     fontSize: '12px',
                     fontWeight: '600',
-                    color: p.primary,
-                    marginBottom: '2px'
-                  }}>{video.label}</p>
+                    color: p.secondary
+                  }}>Instagram</p>
                   <p style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontSize: '14px',
-                    color: p.neutral
-                  }}>Watch on TikTok →</p>
+                    color: p.neutralLight
+                  }}>@iamkellyhw.thestylist</p>
                 </div>
+              </div>
+
+              <p style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: '17px',
+                fontStyle: 'italic',
+                color: p.neutralLight,
+                lineHeight: '1.6',
+                marginBottom: '24px'
+              }}>
+                "Join me for real-life outfit ideas, styling tips, and the occasional
+                behind-the-scenes peek at my work with clients and at M&S!"
+              </p>
+
+              <div style={{
+                display: 'flex',
+                gap: '12px',
+                marginBottom: '24px',
+                flexWrap: 'wrap'
+              }}>
+                {['Outfit Ideas', 'Style Tips', 'Client Transformations', 'Behind the Scenes'].map((tag, i) => (
+                  <span key={i} style={{
+                    fontFamily: "'Libre Franklin', sans-serif",
+                    fontSize: '10px',
+                    fontWeight: '500',
+                    letterSpacing: '0.05em',
+                    textTransform: 'uppercase',
+                    color: p.secondary,
+                    backgroundColor: 'rgba(255,255,255,0.1)',
+                    padding: '8px 14px',
+                    borderRadius: '20px'
+                  }}>{tag}</span>
+                ))}
+              </div>
+
+              <a
+                href="https://www.instagram.com/iamkellyhw.thestylist/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '10px',
+                  textDecoration: 'none',
+                  padding: '16px 28px',
+                  backgroundColor: p.accent1,
+                  borderRadius: '30px',
+                  transition: 'all 0.3s ease',
+                  width: '100%'
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(232,97,77,0.4)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
+              >
+                <span style={{
+                  fontFamily: "'Libre Franklin', sans-serif",
+                  fontSize: '12px',
+                  fontWeight: '600',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: '#fff'
+                }}>Follow on Instagram</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
               </a>
-            ))}
+            </div>
           </div>
         </div>
       </section>
