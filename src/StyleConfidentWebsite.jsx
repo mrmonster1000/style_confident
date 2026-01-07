@@ -231,14 +231,26 @@ const StyleConfidentWebsite = () => {
           .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
           .section-padding { padding: 60px 24px !important; }
           .problem-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .tiktok-grid { grid-template-columns: 1fr !important; }
+          .ms-header { flex-direction: column !important; text-align: center !important; }
+          .ms-quote { max-width: 100% !important; text-align: center !important; }
+          .about-credentials { justify-content: center !important; }
         }
-        
+
         @media (max-width: 600px) {
           .footer-grid { grid-template-columns: 1fr !important; }
-          .hero-content h1 { font-size: 32px !important; }
-          .section-title { font-size: 32px !important; }
+          .hero-content h1 { font-size: 28px !important; }
+          .section-title { font-size: 28px !important; }
           .cta-buttons { flex-direction: column; width: 100%; }
           .cta-buttons button { width: 100%; }
+          .nav-logo { width: 50px !important; height: 50px !important; }
+          .nav-text { font-size: 16px !important; }
+          .nav-subtext { font-size: 8px !important; }
+          .hero-photo { max-width: 280px !important; }
+          .about-image { max-width: 250px !important; margin: 0 auto !important; }
+          .ms-logo { font-size: 32px !important; }
+          .ms-quote-text { font-size: 17px !important; }
+          .bridal-section { padding: 60px 24px !important; }
         }
 
         /* Booking Modal Styles */
@@ -652,6 +664,7 @@ const StyleConfidentWebsite = () => {
           <img
             src="/images/style-confident-logo.jpg"
             alt="Style Confident Logo"
+            className="nav-logo"
             style={{
               width: '70px',
               height: '70px',
@@ -660,7 +673,7 @@ const StyleConfidentWebsite = () => {
             }}
           />
           <div>
-            <span style={{
+            <span className="nav-text" style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: '20px',
               fontWeight: '500',
@@ -668,7 +681,7 @@ const StyleConfidentWebsite = () => {
               display: 'block',
               lineHeight: 1.1
             }}>Style Confident</span>
-            <span style={{
+            <span className="nav-subtext" style={{
               fontFamily: "'Libre Franklin', sans-serif",
               fontSize: '9px',
               letterSpacing: '0.1em',
@@ -785,7 +798,7 @@ const StyleConfidentWebsite = () => {
         }} />
 
         {/* Main hero content - two column */}
-        <div style={{
+        <div className="hero-grid" style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           width: '100%',
@@ -804,6 +817,7 @@ const StyleConfidentWebsite = () => {
             <img
               src="/images/KellyWelshpicked2024_19.jpg"
               alt="Kelly Harvey-Welsh - Personal Stylist"
+              className="hero-photo"
               style={{
                 width: '100%',
                 maxWidth: '400px',
@@ -815,7 +829,7 @@ const StyleConfidentWebsite = () => {
           </div>
 
           {/* Right - Text content */}
-          <div style={{
+          <div className="hero-content" style={{
             padding: '40px 60px 40px 40px',
             display: 'flex',
             flexDirection: 'column',
@@ -883,7 +897,7 @@ const StyleConfidentWebsite = () => {
             </div>
 
             {/* CTA buttons */}
-            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+            <div className="cta-buttons" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
               <button
                 className="cta-primary"
                 onClick={() => setShowBookingModal(true)}
@@ -1050,6 +1064,7 @@ const StyleConfidentWebsite = () => {
           <img
             src="/images/KellyWelshpicked2024-removebg-preview.png"
             alt="Kelly Harvey-Welsh - Meet Your Stylist"
+            className="about-image"
             style={{
               width: '100%',
               maxWidth: '380px',
@@ -1107,9 +1122,9 @@ const StyleConfidentWebsite = () => {
             of frustration and find that confidence faster. No fashion rules,
             no judgement — just real solutions that work for your life."
           </p>
-          <div style={{
+          <div className="about-credentials" style={{
             display: 'flex',
-            gap: '40px',
+            gap: '30px',
             flexWrap: 'wrap',
             paddingTop: '24px',
             borderTop: `1px solid ${p.secondary}`,
@@ -1174,7 +1189,7 @@ const StyleConfidentWebsite = () => {
       </section>
 
       {/* As Featured Section */}
-      <section style={{
+      <section className="section-padding" style={{
         backgroundColor: p.background,
         padding: '70px 80px',
         borderTop: `1px solid ${p.secondary}`,
@@ -1182,20 +1197,22 @@ const StyleConfidentWebsite = () => {
       }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           {/* Header */}
-          <div style={{
+          <div className="ms-header" style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
+            justifyContent: 'center',
             marginBottom: '32px',
             flexWrap: 'wrap',
             gap: '20px'
           }}>
-            <div style={{
+            <div className="ms-quote" style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '20px'
+              gap: '20px',
+              flexWrap: 'wrap',
+              justifyContent: 'center'
             }}>
-              <div style={{
+              <div className="ms-logo" style={{
                 fontFamily: "'Playfair Display', serif",
                 fontSize: '42px',
                 fontWeight: '700',
@@ -1203,7 +1220,7 @@ const StyleConfidentWebsite = () => {
                 letterSpacing: '-0.02em'
               }}>M&S</div>
               <div>
-                <p style={{
+                <p className="ms-quote-text" style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: '20px',
                   fontStyle: 'italic',
@@ -1211,7 +1228,7 @@ const StyleConfidentWebsite = () => {
                   lineHeight: '1.5',
                   marginBottom: '6px'
                 }}>
-                  "When I'm not styling clients privately, I'm the official<br/>
+                  "When I'm not styling clients privately, I'm the official
                   personal stylist for <strong style={{ fontStyle: 'normal', color: p.primary }}>M&S Battersea</strong> — you can find me on their TikTok channel"
                 </p>
                 <p style={{
@@ -1225,7 +1242,7 @@ const StyleConfidentWebsite = () => {
           </div>
 
           {/* TikTok Videos Grid */}
-          <div style={{
+          <div className="tiktok-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '20px'
@@ -1507,7 +1524,7 @@ const StyleConfidentWebsite = () => {
         backgroundColor: p.primary,
         scrollMarginTop: '100px'
       }}>
-        <div className="section-padding" style={{
+        <div className="section-padding bridal-section" style={{
           padding: '80px',
           display: 'flex',
           flexDirection: 'column',
