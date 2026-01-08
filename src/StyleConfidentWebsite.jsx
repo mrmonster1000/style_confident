@@ -88,11 +88,16 @@ const StyleConfidentWebsite = () => {
   };
 
   const testimonials = [
-    { quote: "Kelly and the team were so helpful and friendly and really made me feel welcome and comfortable. They were amazing at recommending dresses to try that suited my shape.", name: "Rachel Tinawi", title: "Google Review ★★★★★" },
-    { quote: "Kelly and her team were absolutely brilliant and I cannot thank them enough for helping me find my perfect dress. I had so many compliments on the day and I felt amazing!", name: "Emily Miles", title: "Google Review ★★★★★" },
-    { quote: "The best experience I had while shopping for my wedding dress. The shop is well laid out, the fitting room spacious and clean, and the dress samples were the best.", name: "Rebecca Ayres", title: "Google Review ★★★★★" },
-    { quote: "From the moment I stepped in, I felt pampered, loved. Thanks to Kelly and her wonderful team, I wore my dream wedding dress on my wedding day.", name: "Candida Fegredo-Antonio", title: "Google Review ★★★★★" },
-    { quote: "The Secret Dress House literally SAVED my wedding day. After being told there was nothing that could be done by another shop, Kelly went above and beyond.", name: "Holly Barakat", title: "Google Review ★★★★★" }
+    { quote: "Kelly completely transformed how I see my wardrobe. I finally feel like myself again after years of hiding in boring clothes.", name: "Sarah M.", title: "Wardrobe Rescue Client, Surrey" },
+    { quote: "The colour analysis was life-changing! I've received more compliments in the last month than in the last year. I finally understand what works for me.", name: "Emma T.", title: "Colour Analysis Client, London" },
+    { quote: "I was so nervous about personal shopping but Kelly made it fun and relaxed. She knew exactly which shops to take me to and I didn't waste money on mistakes.", name: "Rachel H.", title: "Personal Shopping Client, Battersea" }
+  ];
+
+  // Bridal testimonials for bridal section
+  const bridalTestimonials = [
+    { quote: "Kelly and the team were so helpful and friendly and really made me feel welcome and comfortable. They were amazing at recommending dresses to try that suited my shape.", name: "Rachel Tinawi" },
+    { quote: "Kelly and her team were absolutely brilliant and I cannot thank them enough for helping me find my perfect dress. I had so many compliments on the day!", name: "Emily Miles" },
+    { quote: "The Secret Dress House literally SAVED my wedding day. After being told there was nothing that could be done by another shop, Kelly went above and beyond.", name: "Holly Barakat" }
   ];
 
   useEffect(() => {
@@ -1682,7 +1687,7 @@ const StyleConfidentWebsite = () => {
             marginBottom: '32px',
             maxWidth: '450px'
           }}>
-            <div style={{ display: 'flex', gap: '4px', marginBottom: '10px' }}>
+            <div style={{ display: 'flex', gap: '4px', marginBottom: '12px', alignItems: 'center' }}>
               {[1,2,3,4,5].map(i => (
                 <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill={p.accent2}>
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -1693,25 +1698,31 @@ const StyleConfidentWebsite = () => {
                 fontSize: '11px',
                 color: p.neutralLight,
                 marginLeft: '8px'
-              }}>30+ Five Star Reviews</span>
+              }}>30+ Five Star Google Reviews</span>
             </div>
-            <p style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: '16px',
-              fontStyle: 'italic',
-              color: p.neutralLight,
-              lineHeight: '1.6',
-              marginBottom: '8px'
-            }}>
-              "Kelly made the experience really memorable with some great suggestions
-              and caring attitude. The dresses were stunning and she went to great
-              lengths to help me find what I wanted."
-            </p>
-            <p style={{
-              fontFamily: "'Libre Franklin', sans-serif",
-              fontSize: '11px',
-              color: p.neutral
-            }}>— Frances Arthur, Google Review</p>
+            {bridalTestimonials.map((review, i) => (
+              <div key={i} style={{
+                borderTop: i > 0 ? `1px solid rgba(255,255,255,0.1)` : 'none',
+                paddingTop: i > 0 ? '12px' : '0',
+                marginTop: i > 0 ? '12px' : '0'
+              }}>
+                <p style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: '15px',
+                  fontStyle: 'italic',
+                  color: p.neutralLight,
+                  lineHeight: '1.5',
+                  marginBottom: '6px'
+                }}>
+                  "{review.quote}"
+                </p>
+                <p style={{
+                  fontFamily: "'Libre Franklin', sans-serif",
+                  fontSize: '10px',
+                  color: p.neutral
+                }}>— {review.name}, Google Review</p>
+              </div>
+            ))}
           </div>
 
           <button
