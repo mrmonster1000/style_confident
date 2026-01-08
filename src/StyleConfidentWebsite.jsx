@@ -1137,7 +1137,7 @@ const StyleConfidentWebsite = () => {
               { label: 'Currently At', value: 'M&S Battersea Personal Stylist' },
               { label: 'Fashion Training', value: 'London College of Style' },
               { label: 'TV Styling', value: 'This Morning, My Mum Your Dad' },
-              { label: 'Background', value: 'Ran a bridal boutique for 5 years' }
+              { label: 'Previously', value: 'Owner, The Secret Dress House, Reigate (2013-2018)' }
             ].map((item, i) => (
               <div key={i}>
                 <p style={{
@@ -1670,8 +1670,8 @@ const StyleConfidentWebsite = () => {
             maxWidth: '450px'
           }}>
             Wedding dress shopping should be magical, not stressful. As the former owner
-            of The Secret Dress House bridal boutique, I've helped hundreds of brides
-            find their perfect dress. Let me be your expert guide.
+            of The Secret Dress House in Reigate, Surrey (2013-2018), I've helped hundreds
+            of brides find their perfect dress. Let me be your expert guide.
           </p>
 
           {/* Bridal Reviews */}
