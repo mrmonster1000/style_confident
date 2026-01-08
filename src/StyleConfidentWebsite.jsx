@@ -88,9 +88,11 @@ const StyleConfidentWebsite = () => {
   };
 
   const testimonials = [
-    { quote: "Kelly completely transformed how I see my wardrobe. I finally feel like myself again after years of hiding in boring clothes.", name: "Sarah M.", title: "Working Mum, Surrey" },
-    { quote: "The colour analysis was life-changing! I've received more compliments in the last month than in the last year.", name: "Emma T.", title: "Marketing Director, London" },
-    { quote: "Worth every penny. Kelly helped me find my dream wedding dress in just two appointments.", name: "Charlotte R.", title: "Bride, 2024" }
+    { quote: "Kelly and the team were so helpful and friendly and really made me feel welcome and comfortable. They were amazing at recommending dresses to try that suited my shape.", name: "Rachel Tinawi", title: "Google Review ★★★★★" },
+    { quote: "Kelly and her team were absolutely brilliant and I cannot thank them enough for helping me find my perfect dress. I had so many compliments on the day and I felt amazing!", name: "Emily Miles", title: "Google Review ★★★★★" },
+    { quote: "The best experience I had while shopping for my wedding dress. The shop is well laid out, the fitting room spacious and clean, and the dress samples were the best.", name: "Rebecca Ayres", title: "Google Review ★★★★★" },
+    { quote: "From the moment I stepped in, I felt pampered, loved. Thanks to Kelly and her wonderful team, I wore my dream wedding dress on my wedding day.", name: "Candida Fegredo-Antonio", title: "Google Review ★★★★★" },
+    { quote: "The Secret Dress House literally SAVED my wedding day. After being told there was nothing that could be done by another shop, Kelly went above and beyond.", name: "Holly Barakat", title: "Google Review ★★★★★" }
   ];
 
   useEffect(() => {
@@ -1664,13 +1666,54 @@ const StyleConfidentWebsite = () => {
             fontSize: '19px',
             color: p.neutralLight,
             lineHeight: '1.7',
+            marginBottom: '24px',
+            maxWidth: '450px'
+          }}>
+            Wedding dress shopping should be magical, not stressful. As the former owner
+            of The Secret Dress House bridal boutique, I've helped hundreds of brides
+            find their perfect dress. Let me be your expert guide.
+          </p>
+
+          {/* Bridal Reviews */}
+          <div style={{
+            backgroundColor: 'rgba(255,255,255,0.1)',
+            borderRadius: '12px',
+            padding: '20px 24px',
             marginBottom: '32px',
             maxWidth: '450px'
           }}>
-            Wedding dress shopping should be magical, not stressful. Let me be 
-            your expert guide—from understanding your vision to finding the gown 
-            that makes you feel like the best version of yourself.
-          </p>
+            <div style={{ display: 'flex', gap: '4px', marginBottom: '10px' }}>
+              {[1,2,3,4,5].map(i => (
+                <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill={p.accent2}>
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              ))}
+              <span style={{
+                fontFamily: "'Libre Franklin', sans-serif",
+                fontSize: '11px',
+                color: p.neutralLight,
+                marginLeft: '8px'
+              }}>30+ Five Star Reviews</span>
+            </div>
+            <p style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: '16px',
+              fontStyle: 'italic',
+              color: p.neutralLight,
+              lineHeight: '1.6',
+              marginBottom: '8px'
+            }}>
+              "Kelly made the experience really memorable with some great suggestions
+              and caring attitude. The dresses were stunning and she went to great
+              lengths to help me find what I wanted."
+            </p>
+            <p style={{
+              fontFamily: "'Libre Franklin', sans-serif",
+              fontSize: '11px',
+              color: p.neutral
+            }}>— Frances Arthur, Google Review</p>
+          </div>
+
           <button
             className="cta-primary"
             onClick={() => setShowBookingModal(true)}
