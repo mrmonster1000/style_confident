@@ -2269,45 +2269,7 @@ const StyleConfidentWebsite = () => {
               color: p.neutralLight,
               marginBottom: '20px'
             }}>London · Surrey · Online</p>
-            <p style={{
-              fontFamily: "'Libre Franklin', sans-serif",
-              fontSize: '10px',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: p.neutral,
-              marginBottom: '8px'
-            }}>Newsletter</p>
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <input 
-                type="email" 
-                placeholder="Your email"
-                style={{
-                  flex: 1,
-                  padding: '12px 14px',
-                  border: `1px solid ${p.neutral}`,
-                  borderRadius: '4px',
-                  backgroundColor: 'transparent',
-                  color: p.secondary,
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: '14px',
-                  minWidth: 0
-                }}
-              />
-              <button style={{
-                backgroundColor: p.accent1,
-                color: '#fff',
-                border: 'none',
-                padding: '12px 16px',
-                borderRadius: '4px',
-                fontFamily: "'Libre Franklin', sans-serif",
-                fontSize: '10px',
-                fontWeight: '600',
-                letterSpacing: '0.08em',
-                cursor: 'pointer',
-                flexShrink: 0
-              }}>JOIN</button>
-            </div>
-          </div>
+                      </div>
         </div>
 
         <div style={{
