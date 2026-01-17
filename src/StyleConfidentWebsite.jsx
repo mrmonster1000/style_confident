@@ -1238,7 +1238,7 @@ const StyleConfidentWebsite = () => {
             {[
               { label: 'Currently At', value: 'M&S Battersea Personal Stylist' },
               { label: 'Fashion Training', value: 'London College of Style' },
-              { label: 'TV Styling', value: 'This Morning, My Mum Your Dad' },
+              { label: 'Client TV Styling', value: 'This Morning, My Mum Your Dad' },
               { label: 'Previously', value: 'Owner, The Secret Dress House, Reigate (2013-2018)' }
             ].map((item, i) => (
               <div key={i}>
@@ -1566,7 +1566,7 @@ const StyleConfidentWebsite = () => {
             { name: 'Personal Shopping', price: '£250', desc: "I'll take you to shops that actually suit your style and budget — no more wandering aimlessly or buying mistakes", duration: '3 hours' },
             { name: 'Colour Analysis', price: '£170', desc: "Find out which colours make you look alive (and which ones drain you). Game-changer for shopping", duration: '2 hours' },
             { name: 'Online Style Session', price: '£150', desc: "Can't meet in person? We'll do it over video — same results, from your own wardrobe", duration: '2 hours' },
-            { name: 'Event & TV Styling', price: 'Get in Touch', desc: "Big event coming up? TV appearance? I've styled for This Morning, My Mum Your Dad, and more. Let's make sure you look incredible", duration: 'Bespoke' },
+            { name: 'Event & Client TV Styling', price: 'Get in Touch', desc: "Big event coming up? TV appearance? I've styled clients for This Morning, My Mum Your Dad, and more. Let's make sure you look incredible", duration: 'Bespoke' },
             { name: 'Bridal Styling', price: 'Get in Touch', desc: "Former bridal boutique owner turned your secret weapon. From first appointment to 'the one' — I know exactly how to find your dream dress", duration: 'Bespoke' },
           ].map((service, i) => (
             <div 
