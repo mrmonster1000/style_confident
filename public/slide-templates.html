@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Confident - Slide Templates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Libre+Franklin:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Libre Franklin', sans-serif;
+      background: #e5e5e5;
+      padding: 40px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #2D2926;
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: #7D756E;
+    }
+
+    .slide-section {
+      margin-bottom: 60px;
+    }
+
+    .slide-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E8614D;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .slide-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #2D2926;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    /* Slide Container - 16:9 Aspect Ratio */
+    .slide {
+      width: 100%;
+      max-width: 960px;
+      aspect-ratio: 16 / 9;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    /* Variables */
+    :root {
+      --primary: #2D2926;
+      --secondary: #FAF7F4;
+      --accent1: #E8614D;
+      --accent2: #C9A962;
+      --neutral: #7D756E;
+      --neutral-light: #B8B2AA;
+      --background: #FFFDFB;
+    }
+
+    .usage-notes {
+      max-width: 960px;
+      margin: 20px auto 0;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #7D756E;
+    }
+
+    .usage-notes strong {
+      color: #2D2926;
+    }
+
+    /* ==================== SLIDE 1: Title Slide ==================== */
+    .slide-title {
+      background: var(--primary);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .slide-title .decorative-circle-1 {
+      position: absolute;
+      top: 10%;
+      right: 15%;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px solid var(--accent2);
+      opacity: 0.3;
+    }
+
+    .slide-title .decorative-circle-2 {
+      position: absolute;
+      bottom: 20%;
+      left: 10%;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--accent1);
+      opacity: 0.15;
+    }
+
+    .slide-title .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--secondary);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      color: var(--primary);
+    }
+
+    .slide-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 500;
+      color: var(--secondary);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .slide-title h1 em {
+      color: var(--accent1);
+      font-style: italic;
+    }
+
+    .slide-title .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: var(--neutral-light);
+      margin-bottom: 32px;
+    }
+
+    .slide-title .author {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--neutral);
+    }
+
+    /* ==================== SLIDE 2: Section Divider ==================== */
+    .slide-section-divider {
+      background: var(--accent1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+      text-align: center;
+    }
+
+    .slide-section-divider .section-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 16px;
+    }
+
+    .slide-section-divider h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 500;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .slide-section-divider .section-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ==================== SLIDE 3: Content with Image ==================== */
+    .slide-content-image {
+      background: var(--secondary);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .slide-content-image .image-side {
+      background: linear-gradient(135deg, var(--neutral-light) 0%, var(--neutral) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 14px;
+    }
+
+    .slide-content-image .content-side {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide-content-image .label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent1);
+      margin-bottom: 12px;
+    }
+
+    .slide-content-image h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .slide-content-image p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--neutral);
+      line-height: 1.7;
+    }
+
+    /* ==================== SLIDE 4: Quote Slide ==================== */
+    .slide-quote {
+      background: var(--background);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    .slide-quote .quote-mark {
+      font-family: 'Georgia', serif;
+      font-size: 120px;
+      color: var(--accent2);
+      line-height: 0.5;
+      margin-bottom: 24px;
+    }
+
+    .slide-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--primary);
+      line-height: 1.5;
+      max-width: 700px;
+      margin-bottom: 32px;
+    }
+
+    .slide-quote .attribution {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--neutral);
+    }
+
+    .slide-quote .attribution-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      color: var(--neutral-light);
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-top: 4px;
+    }
+
+    /* ==================== SLIDE 5: Three Column ==================== */
+    .slide-three-column {
+      background: var(--secondary);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-three-column .slide-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .slide-three-column .label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent1);
+      margin-bottom: 8px;
+    }
+
+    .slide-three-column h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .slide-three-column .columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      flex: 1;
+    }
+
+    .slide-three-column .column {
+      background: var(--background);
+      border-radius: 12px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-three-column .column-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent1);
+      opacity: 0.15;
+      margin-bottom: 20px;
+    }
+
+    .slide-three-column .column h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .slide-three-column .column p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      color: var(--neutral);
+      line-height: 1.6;
+    }
+
+    /* ==================== SLIDE 6: Services / Pricing ==================== */
+    .slide-services {
+      background: var(--primary);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-services .slide-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .slide-services .label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent1);
+      margin-bottom: 8px;
+    }
+
+    .slide-services h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 500;
+      color: var(--secondary);
+    }
+
+    .slide-services .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      flex: 1;
+    }
+
+    .slide-services .service-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .slide-services .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--secondary);
+      margin-bottom: 8px;
+    }
+
+    .slide-services .service-card p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      color: var(--neutral-light);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .slide-services .service-card .price {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--accent1);
+    }
+
+    /* ==================== SLIDE 7: Call to Action ==================== */
+    .slide-cta {
+      background: var(--accent1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+      text-align: center;
+    }
+
+    .slide-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 500;
+      color: white;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .slide-cta p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 36px;
+      max-width: 500px;
+    }
+
+    .slide-cta .cta-button {
+      background: white;
+      color: var(--accent1);
+      border: none;
+      padding: 18px 48px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 30px;
+    }
+
+    .slide-cta .contact-info {
+      margin-top: 32px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 13px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ==================== SLIDE 8: Thank You / End ==================== */
+    .slide-end {
+      background: var(--primary);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .slide-end .decorative-circle {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 2px solid var(--accent2);
+      opacity: 0.2;
+    }
+
+    .slide-end h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 500;
+      color: var(--secondary);
+      margin-bottom: 24px;
+    }
+
+    .slide-end h2 em {
+      color: var(--accent1);
+      font-style: italic;
+    }
+
+    .slide-end .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--neutral-light);
+      margin-bottom: 40px;
+    }
+
+    .slide-end .contact-block {
+      display: flex;
+      gap: 48px;
+      margin-top: 20px;
+    }
+
+    .slide-end .contact-item {
+      text-align: center;
+    }
+
+    .slide-end .contact-label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--neutral);
+      margin-bottom: 6px;
+    }
+
+    .slide-end .contact-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      color: var(--secondary);
+    }
+
+    /* ==================== SLIDE 9: Two Column Text ==================== */
+    .slide-two-column-text {
+      background: var(--background);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .slide-two-column-text .left-col {
+      background: var(--secondary);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide-two-column-text .right-col {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide-two-column-text .label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent1);
+      margin-bottom: 12px;
+    }
+
+    .slide-two-column-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 500;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .slide-two-column-text h2 em {
+      color: var(--accent1);
+      font-style: italic;
+    }
+
+    .slide-two-column-text .content-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--neutral);
+      line-height: 1.8;
+    }
+
+    .slide-two-column-text .bullet-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .slide-two-column-text .bullet-list li {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      color: var(--neutral);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--secondary);
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .slide-two-column-text .bullet-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background: var(--accent1);
+      border-radius: 50%;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: white; padding: 0; }
+      .slide-section { page-break-after: always; margin-bottom: 0; }
+      .slide { box-shadow: none; border: 1px solid #ddd; }
+      .usage-notes { display: none; }
+      .page-header { display: none; }
+      .slide-label, .slide-name { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <h1>Style Confident</h1>
+    <p>Slide Templates for Presentations</p>
+  </div>
+
+  <!-- SLIDE 1: Title Slide -->
+  <div class="slide-section">
+    <div class="slide-label">Slide Template 1</div>
+    <div class="slide-name">Title Slide</div>
+    <div class="slide slide-title">
+      <div class="decorative-circle-1"></div>
+      <div class="decorative-circle-2"></div>
+      <div class="logo">LOGO</div>
+      <h1>Presentation<br/><em>Title Here</em></h1>
+      <p class="subtitle">A subtitle or description goes here</p>
+      <p class="author">Kelly Harvey-Welsh | Style Confident</p>
+    </div>
+    <div class="usage-notes">
+      <strong>Usage:</strong> Opening slide for presentations. Replace "LOGO" with Kelly's logo. Background is Primary colour (#2D2926). Decorative circles add visual interest.
+    </div>
+  </div>
+
+  <!-- SLIDE 2: Section Divider -->
+  <div class="slide-section">
+    <div class="slide-label">Slide Template 2</div>
+    <div class="slide-name">Section Divider</div>
+    <div class="slide slide-section-divider">
+      <div class="section-number">01</div>
+      <h2>Section Title</h2>
+      <p class="section-subtitle">Brief description of what this section covers</p>
+    </div>
+    <div class="usage-notes">
+      <strong>Usage:</strong> Use between major sections to break up content. Background is Accent 1 coral (#E8614D). Number can be removed if not needed.
+    </div>
+  </div>
+
+  <!-- SLIDE 3: Content with Image -->
+  <div class="slide-section">
+    <div class="slide-label">Slide Template 3</div>
+    <div class="slide-name">Content with Image</div>
+    <div class="slide slide-content-image">
+      <div class="image-side">[Your Image Here]</div>
+      <div class="content-side">
+        <p class="label">Topic Label</p>
+        <h2>Main Heading Goes Here</h2>
+        <p>Supporting text that provides more detail about the topic. This can be a few sentences that explain the key point you want to make.</p>
+      </div>
+    </div>
+    <div class="usage-notes">
+      <strong>Usage:</strong> Great for introducing concepts with a supporting image. Image can be on either side. Background is Secondary cream (#FAF7F4).
+    </div>
+  </div>
+
+  <!-- SLIDE 4: Quote Slide -->
+  <div class="slide-section">
+    <div class="slide-label">Slide Template 4</div>
+    <div class="slide-name">Quote / Testimonial</div>
+    <div class="slide slide-quote">
+      <div class="quote-mark">"</div>
+      <blockquote>Kelly completely transformed how I see my wardrobe. I finally feel like myself again.</blockquote>
+      <p class="attribution">Sarah M.</p>
+      <p class="attribution-title">Wardrobe Rescue Client, Surrey</p>
+    </div>
+    <div class="usage-notes">
+      <strong>Usage:</strong> Feature client testimonials or impactful quotes. Large gold quote mark (#C9A962) adds elegance. Keep quotes concise for readability.
+    </div>
+  </div>
+
+  <!-- SLIDE 5: Three Column -->
+  <div class="slide-section">
+    <div class="slide-label">Slide Template 5</div>
+    <div class="slide-name">Three Column Layout</div>
+    <div class="slide slide-three-column">
+      <div class="slide-header">
+        <p class="label">How I Can Help</p>
+        <h2>Three Key Points</h2>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="column-icon"></div>
+          <h3>First Point</h3>
+          <p>Description of the first key point or benefit that you want to highlight.</p>
+        </div>
+        <div class="column">
+          <div class="column-icon"></div>
+          <h3>Second Point</h3>
+          <p>Description of the second key point or benefit that you want to highlight.</p>
+        </div>
+        <div class="column">
+          <div class="column-icon"></div>
+          <h3>Third Point</h3>
+          <p>Description of the third key point or benefit that you want to highlight.</p>
+        </div>
+      </div>
+    </div>
+    <div class="usage-notes">
+      <strong>Usage:</strong> Present three related concepts, benefits, or steps. Replace circular icons with relevant icons or images. Works well for "3 reasons", "3 steps", etc.
+    </div>
+  </div>
+
+  <!-- SLIDE 6: Services / Pricing -->
+  <div class="slide-section">
+    <div class="slide-label">Slide Template 6</div>
+    <div class="slide-name">Services / Pricing</div>
+    <div class="slide slide-services">
+      <div class="slide-header">
+        <p class="label">Services</p>
+        <h2>What I Offer</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Wardrobe Rescue</h3>
+          <p>Clear the clutter and create outfits from pieces you already own.</p>
+          <span class="price">£250</span>
+        </div>
+        <div class="service-card">
+          <h3>Personal Shopping</h3>
+          <p>Guided shopping to shops that suit your style and budget.</p>
+          <span class="price">£250</span>
+        </div>
+        <div class="service-card">
+          <h3>Colour Analysis</h3>
+          <p>Discover which colours make you look alive and confident.</p>
+          <span class="price">£170</span>
+        </div>
+      </div>
+    </div>
+    <div class="usage-notes">
+      <strong>Usage:</strong> Showcase services with pricing. Dark background (#2D2926) with subtle card styling. Coral accent (#E8614D) highlights pricing.
+    </div>
+  </div>
+
+  <!-- SLIDE 7: Call to Action -->
+  <div class="slide-section">
+    <div class="slide-label">Slide Template 7</div>
+    <div class="slide-name">Call to Action</div>
+    <div class="slide slide-cta">
+      <h2>Ready to Get Started?</h2>
+      <p>Book a free 15-minute consultation to discuss how I can help you.</p>
+      <button class="cta-button">Book Now</button>
+      <p class="contact-info">hello@styleconfident.com | @iamkellyhw.thestylist</p>
+    </div>
+    <div class="usage-notes">
+      <strong>Usage:</strong> Drive action at the end of a presentation section. Bold coral background (#E8614D) with white button creates strong visual hierarchy.
+    </div>
+  </div>
+
+  <!-- SLIDE 8: Thank You / End -->
+  <div class="slide-section">
+    <div class="slide-label">Slide Template 8</div>
+    <div class="slide-name">Thank You / End Slide</div>
+    <div class="slide slide-end">
+      <div class="decorative-circle"></div>
+      <h2>Thank <em>You</em></h2>
+      <p class="tagline">Real Style for Real Life</p>
+      <div class="contact-block">
+        <div class="contact-item">
+          <p class="contact-label">Email</p>
+          <p class="contact-value">hello@styleconfident.com</p>
+        </div>
+        <div class="contact-item">
+          <p class="contact-label">Instagram</p>
+          <p class="contact-value">@iamkellyhw.thestylist</p>
+        </div>
+        <div class="contact-item">
+          <p class="contact-label">Website</p>
+          <p class="contact-value">styleconfident.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="usage-notes">
+      <strong>Usage:</strong> Closing slide with contact information. Dark background (#2D2926) matches title slide for bookend effect. Decorative gold circle adds elegance.
+    </div>
+  </div>
+
+  <!-- SLIDE 9: Two Column Text -->
+  <div class="slide-section">
+    <div class="slide-label">Slide Template 9</div>
+    <div class="slide-name">Two Column with List</div>
+    <div class="slide slide-two-column-text">
+      <div class="left-col">
+        <p class="label">About</p>
+        <h2>A Headline That<br/><em>Spans Two Lines</em></h2>
+      </div>
+      <div class="right-col">
+        <ul class="bullet-list">
+          <li>First key point or benefit to highlight</li>
+          <li>Second important detail or feature</li>
+          <li>Third supporting point</li>
+          <li>Fourth item in the list</li>
+        </ul>
+      </div>
+    </div>
+    <div class="usage-notes">
+      <strong>Usage:</strong> Present a concept with supporting bullet points. Left side has headline, right side has details. Great for "Why choose me" or "What you'll get" slides.
+    </div>
+  </div>
+
+</body>
+</html>

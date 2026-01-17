@@ -392,8 +392,8 @@ const StyleConfidentWebsite = () => {
               margin: 0
             }}>
               Prefer email? Contact me at{' '}
-              <a href="mailto:hello@styleconfident.com" style={{ color: p.accent1 }}>
-                hello@styleconfident.com
+              <a href="mailto:kelly@styleconfident.co.uk" style={{ color: p.accent1 }}>
+                kelly@styleconfident.co.uk
               </a>
             </p>
           </div>
@@ -2245,7 +2245,7 @@ const StyleConfidentWebsite = () => {
               marginBottom: '20px',
               color: p.secondary
             }}>Get in Touch</h4>
-            <a href="mailto:hello@styleconfident.com" style={{
+            <a href="mailto:kelly@styleconfident.co.uk" style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: '15px',
               color: p.neutralLight,
@@ -2256,7 +2256,7 @@ const StyleConfidentWebsite = () => {
             }}
             onMouseEnter={(e) => e.currentTarget.style.color = p.secondary}
             onMouseLeave={(e) => e.currentTarget.style.color = p.neutralLight}
-            >hello@styleconfident.com</a>
+            >kelly@styleconfident.co.uk</a>
             <p style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: '15px',

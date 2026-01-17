@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Confident - Brand Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Libre+Franklin:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Libre Franklin', sans-serif;
+      background: #FAFAFA;
+      color: #2D2926;
+      line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+
+    .header {
+      text-align: center;
+      padding: 60px 40px;
+      background: #2D2926;
+      color: #FAF7F4;
+      margin-bottom: 60px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: #B8B2AA;
+    }
+
+    section {
+      background: white;
+      border-radius: 16px;
+      padding: 48px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #FAF7F4;
+    }
+
+    h3 {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E8614D;
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+    h3:first-of-type { margin-top: 0; }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .color-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #eee;
+    }
+
+    .color-swatch {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .color-info {
+      padding: 12px;
+      text-align: center;
+    }
+
+    .color-name {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .color-hex {
+      font-size: 12px;
+      color: #7D756E;
+      font-family: monospace;
+    }
+
+    .color-use {
+      font-size: 10px;
+      color: #B8B2AA;
+      margin-top: 6px;
+    }
+
+    .palette-section {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #eee;
+    }
+    .palette-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .palette-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .font-sample {
+      margin-bottom: 32px;
+      padding: 24px;
+      background: #FAF7F4;
+      border-radius: 12px;
+    }
+
+    .font-name {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #7D756E;
+      margin-bottom: 12px;
+    }
+
+    .font-preview-playfair {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 500;
+      color: #2D2926;
+      margin-bottom: 8px;
+    }
+
+    .font-preview-cormorant {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-style: italic;
+      color: #7D756E;
+      margin-bottom: 8px;
+    }
+
+    .font-preview-libre {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #2D2926;
+      line-height: 1.7;
+    }
+
+    .font-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .font-detail {
+      font-size: 12px;
+    }
+
+    .font-detail-label {
+      color: #B8B2AA;
+      margin-bottom: 4px;
+    }
+
+    .font-detail-value {
+      color: #2D2926;
+      font-weight: 500;
+    }
+
+    .typography-scale {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .type-row {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .type-label {
+      width: 120px;
+      flex-shrink: 0;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #B8B2AA;
+    }
+
+    .type-size {
+      width: 60px;
+      flex-shrink: 0;
+      font-size: 12px;
+      color: #7D756E;
+      font-family: monospace;
+    }
+
+    .element-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .element-card {
+      padding: 24px;
+      background: #FAF7F4;
+      border-radius: 12px;
+    }
+
+    .element-name {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #B8B2AA;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
+      background-color: #E8614D;
+      color: #fff;
+      border: none;
+      padding: 16px 32px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: #2D2926;
+      border: 2px solid #2D2926;
+      padding: 14px 30px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .label-tag {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #E8614D;
+    }
+
+    .canva-note {
+      background: linear-gradient(135deg, #7B68EE15, #00C4CC15);
+      border: 1px solid #7B68EE30;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 32px;
+    }
+
+    .canva-note h4 {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #7B68EE;
+    }
+
+    .canva-note p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .canva-note ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    .canva-note li {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .copy-btn {
+      background: #2D2926;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+
+    .copy-btn:hover {
+      background: #E8614D;
+    }
+
+    @media print {
+      .container { padding: 20px; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Style Confident</h1>
+    <p>Brand Style Guide — by Kelly Harvey-Welsh</p>
+  </div>
+
+  <div class="container">
+    <!-- Color Palettes -->
+    <section>
+      <h2>Colour Palettes</h2>
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #7D756E; margin-bottom: 32px;">
+        Four carefully curated palettes to suit different moods and contexts. The "Refined Luxe" palette is the primary brand palette.
+      </p>
+
+      <!-- Refined Luxe (Primary) -->
+      <div class="palette-section">
+        <h3>Primary Palette</h3>
+        <div class="palette-name">Refined Luxe <span style="font-size: 12px; color: #E8614D; font-weight: 600;">(RECOMMENDED)</span></div>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background: #2D2926;">#2D2926</div>
+            <div class="color-info">
+              <div class="color-name">Primary</div>
+              <div class="color-hex">2D2926</div>
+              <div class="color-use">Headers, dark sections</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #FAF7F4; color: #2D2926;">#FAF7F4</div>
+            <div class="color-info">
+              <div class="color-name">Secondary</div>
+              <div class="color-hex">FAF7F4</div>
+              <div class="color-use">Light backgrounds</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #E8614D;">#E8614D</div>
+            <div class="color-info">
+              <div class="color-name">Accent 1</div>
+              <div class="color-hex">E8614D</div>
+              <div class="color-use">CTAs, highlights</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #C9A962;">#C9A962</div>
+            <div class="color-info">
+              <div class="color-name">Accent 2</div>
+              <div class="color-hex">C9A962</div>
+              <div class="color-use">Gold accents</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #7D756E;">#7D756E</div>
+            <div class="color-info">
+              <div class="color-name">Neutral</div>
+              <div class="color-hex">7D756E</div>
+              <div class="color-use">Body text</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #B8B2AA; color: #2D2926;">#B8B2AA</div>
+            <div class="color-info">
+              <div class="color-name">Neutral Light</div>
+              <div class="color-hex">B8B2AA</div>
+              <div class="color-use">Borders, muted text</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #FFFDFB; color: #2D2926; border: 1px solid #eee;">#FFFDFB</div>
+            <div class="color-info">
+              <div class="color-name">Background</div>
+              <div class="color-hex">FFFDFB</div>
+              <div class="color-use">Page background</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern Femme -->
+      <div class="palette-section">
+        <h3>Alternative Palette 1</h3>
+        <div class="palette-name">Modern Femme</div>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background: #6B3A42;">#6B3A42</div>
+            <div class="color-info">
+              <div class="color-name">Primary</div>
+              <div class="color-hex">6B3A42</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #FBF5F3; color: #6B3A42;">#FBF5F3</div>
+            <div class="color-info">
+              <div class="color-name">Secondary</div>
+              <div class="color-hex">FBF5F3</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #E8614D;">#E8614D</div>
+            <div class="color-info">
+              <div class="color-name">Accent 1</div>
+              <div class="color-hex">E8614D</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #D4A574;">#D4A574</div>
+            <div class="color-info">
+              <div class="color-name">Accent 2</div>
+              <div class="color-hex">D4A574</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #5C4F4F;">#5C4F4F</div>
+            <div class="color-info">
+              <div class="color-name">Neutral</div>
+              <div class="color-hex">5C4F4F</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bold & Grounded -->
+      <div class="palette-section">
+        <h3>Alternative Palette 2</h3>
+        <div class="palette-name">Bold & Grounded</div>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background: #2C4A3E;">#2C4A3E</div>
+            <div class="color-info">
+              <div class="color-name">Primary</div>
+              <div class="color-hex">2C4A3E</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #F9F7F4; color: #2C4A3E;">#F9F7F4</div>
+            <div class="color-info">
+              <div class="color-name">Secondary</div>
+              <div class="color-hex">F9F7F4</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #E8614D;">#E8614D</div>
+            <div class="color-info">
+              <div class="color-name">Accent 1</div>
+              <div class="color-hex">E8614D</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #E8C547;">#E8C547</div>
+            <div class="color-info">
+              <div class="color-name">Accent 2</div>
+              <div class="color-hex">E8C547</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #4A5550;">#4A5550</div>
+            <div class="color-info">
+              <div class="color-name">Neutral</div>
+              <div class="color-hex">4A5550</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sleek Minimal -->
+      <div class="palette-section">
+        <h3>Alternative Palette 3</h3>
+        <div class="palette-name">Sleek Minimal</div>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background: #1A1A1A;">#1A1A1A</div>
+            <div class="color-info">
+              <div class="color-name">Primary</div>
+              <div class="color-hex">1A1A1A</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #FAFAFA; color: #1A1A1A;">#FAFAFA</div>
+            <div class="color-info">
+              <div class="color-name">Secondary</div>
+              <div class="color-hex">FAFAFA</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #E8614D;">#E8614D</div>
+            <div class="color-info">
+              <div class="color-name">Accent 1</div>
+              <div class="color-hex">E8614D</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #F4D03F;">#F4D03F</div>
+            <div class="color-info">
+              <div class="color-name">Accent 2</div>
+              <div class="color-hex">F4D03F</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #666666;">#666666</div>
+            <div class="color-info">
+              <div class="color-name">Neutral</div>
+              <div class="color-hex">666666</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section>
+      <h2>Typography</h2>
+
+      <h3>Primary Fonts</h3>
+
+      <div class="font-sample">
+        <div class="font-name">Playfair Display — Headlines</div>
+        <div class="font-preview-playfair">Finally Feel Like Yourself Again</div>
+        <div class="font-details">
+          <div class="font-detail">
+            <div class="font-detail-label">Google Fonts</div>
+            <div class="font-detail-value">Playfair Display</div>
+          </div>
+          <div class="font-detail">
+            <div class="font-detail-label">Weights Used</div>
+            <div class="font-detail-value">400, 500, 600, 700</div>
+          </div>
+          <div class="font-detail">
+            <div class="font-detail-label">Canva Equivalent</div>
+            <div class="font-detail-value">Playfair Display (available in Canva)</div>
+          </div>
+          <div class="font-detail">
+            <div class="font-detail-label">Usage</div>
+            <div class="font-detail-value">Section titles, hero headlines, quotes</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="font-sample">
+        <div class="font-name">Cormorant Garamond — Body & Quotes</div>
+        <div class="font-preview-cormorant">"Worth every penny. Kelly changed how I see myself."</div>
+        <div class="font-details">
+          <div class="font-detail">
+            <div class="font-detail-label">Google Fonts</div>
+            <div class="font-detail-value">Cormorant Garamond</div>
+          </div>
+          <div class="font-detail">
+            <div class="font-detail-label">Weights Used</div>
+            <div class="font-detail-value">400, 500, 600 (regular & italic)</div>
+          </div>
+          <div class="font-detail">
+            <div class="font-detail-label">Canva Equivalent</div>
+            <div class="font-detail-value">Cormorant Garamond (available in Canva)</div>
+          </div>
+          <div class="font-detail">
+            <div class="font-detail-label">Usage</div>
+            <div class="font-detail-value">Subheadings, quotes, elegant body text</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="font-sample">
+        <div class="font-name">Libre Franklin — Labels & UI</div>
+        <div class="font-preview-libre">REAL STYLE FOR REAL LIFE — Clean, modern sans-serif for labels, buttons, and navigation. Used in uppercase with letter-spacing for small labels and tags.</div>
+        <div class="font-details">
+          <div class="font-detail">
+            <div class="font-detail-label">Google Fonts</div>
+            <div class="font-detail-value">Libre Franklin</div>
+          </div>
+          <div class="font-detail">
+            <div class="font-detail-label">Weights Used</div>
+            <div class="font-detail-value">300, 400, 500, 600, 700</div>
+          </div>
+          <div class="font-detail">
+            <div class="font-detail-label">Canva Equivalent</div>
+            <div class="font-detail-value">Libre Franklin or Montserrat</div>
+          </div>
+          <div class="font-detail">
+            <div class="font-detail-label">Usage</div>
+            <div class="font-detail-value">Buttons, labels, navigation, small text</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Typography Scale</h3>
+      <div class="typography-scale">
+        <div class="type-row">
+          <span class="type-label">Hero Headline</span>
+          <span class="type-size">52px</span>
+          <span style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 500;">Finally Feel Like Yourself</span>
+        </div>
+        <div class="type-row">
+          <span class="type-label">Section Title</span>
+          <span class="type-size">42px</span>
+          <span style="font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 500;">Simple Solutions That Work</span>
+        </div>
+        <div class="type-row">
+          <span class="type-label">Card Title</span>
+          <span class="type-size">22px</span>
+          <span style="font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 500;">Wardrobe Rescue</span>
+        </div>
+        <div class="type-row">
+          <span class="type-label">Subheading</span>
+          <span class="type-size">20px</span>
+          <span style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: #7D756E;">For busy women whose bodies have changed</span>
+        </div>
+        <div class="type-row">
+          <span class="type-label">Body Text</span>
+          <span class="type-size">17px</span>
+          <span style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #7D756E;">I'll help you build a style that actually works.</span>
+        </div>
+        <div class="type-row">
+          <span class="type-label">Label / Tag</span>
+          <span class="type-size">11px</span>
+          <span style="font-family: 'Libre Franklin', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: #E8614D;">REAL STYLE FOR REAL LIFE</span>
+        </div>
+        <div class="type-row">
+          <span class="type-label">Button Text</span>
+          <span class="type-size">11px</span>
+          <span style="font-family: 'Libre Franklin', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;">BOOK A CONSULTATION</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- UI Elements -->
+    <section>
+      <h2>UI Elements</h2>
+
+      <h3>Buttons</h3>
+      <div class="element-grid">
+        <div class="element-card">
+          <div class="element-name">Primary Button</div>
+          <button class="btn-primary">Book Now</button>
+          <div style="margin-top: 16px; font-size: 11px; color: #7D756E;">
+            Background: #E8614D<br>
+            Text: White, 11px, 600 weight<br>
+            Letter-spacing: 0.12em<br>
+            Border-radius: 30px<br>
+            Padding: 16px 32px
+          </div>
+        </div>
+        <div class="element-card">
+          <div class="element-name">Secondary Button</div>
+          <button class="btn-secondary">View Services</button>
+          <div style="margin-top: 16px; font-size: 11px; color: #7D756E;">
+            Background: Transparent<br>
+            Border: 2px solid #2D2926<br>
+            Text: #2D2926, 11px, 600 weight<br>
+            Border-radius: 30px
+          </div>
+        </div>
+      </div>
+
+      <h3>Labels & Tags</h3>
+      <div class="element-card" style="max-width: 400px;">
+        <div class="element-name">Section Label</div>
+        <span class="label-tag">How I Can Help</span>
+        <div style="margin-top: 16px; font-size: 11px; color: #7D756E;">
+          Font: Libre Franklin, 11px, 600 weight<br>
+          Letter-spacing: 0.25em<br>
+          Transform: Uppercase<br>
+          Color: #E8614D (Accent 1)
+        </div>
+      </div>
+
+      <h3>Design Patterns</h3>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 16px;">
+        <div style="padding: 24px; background: #FAF7F4; border-radius: 12px;">
+          <div class="element-name">Cards</div>
+          <p style="font-size: 13px; color: #7D756E; line-height: 1.6;">
+            Border-radius: 16px<br>
+            Background: #FFFDFB or #FAF7F4<br>
+            Padding: 36px 28px<br>
+            Shadow on hover: 0 20px 50px rgba(0,0,0,0.12)
+          </p>
+        </div>
+        <div style="padding: 24px; background: #FAF7F4; border-radius: 12px;">
+          <div class="element-name">Decorative Circles</div>
+          <p style="font-size: 13px; color: #7D756E; line-height: 1.6;">
+            Used as background decoration<br>
+            Colors: #C9A962 (gold), #E8614D (coral)<br>
+            Opacity: 10-25%<br>
+            Varied sizes: 60px, 100px, 200px
+          </p>
+        </div>
+        <div style="padding: 24px; background: #FAF7F4; border-radius: 12px;">
+          <div class="element-name">Quote Styling</div>
+          <p style="font-size: 13px; color: #7D756E; line-height: 1.6;">
+            Left border: 3px solid #C9A962<br>
+            Padding-left: 20px<br>
+            Font: Cormorant Garamond, italic<br>
+            Large quote mark: 56px, gold
+          </p>
+        </div>
+        <div style="padding: 24px; background: #FAF7F4; border-radius: 12px;">
+          <div class="element-name">Image Treatment</div>
+          <p style="font-size: 13px; color: #7D756E; line-height: 1.6;">
+            Border-radius: 12px<br>
+            Box-shadow: 0 25px 60px rgba(0,0,0,0.15)<br>
+            Some images: grayscale filter
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Canva Tips -->
+    <section>
+      <h2>Using in Canva</h2>
+
+      <div class="canva-note">
+        <h4>Quick Setup in Canva</h4>
+        <p>All three fonts (Playfair Display, Cormorant Garamond, Libre Franklin) are available in Canva. To set up your brand kit:</p>
+        <ul>
+          <li>Go to <strong>Brand Kit</strong> in Canva (requires Canva Pro)</li>
+          <li>Add the hex codes above as your brand colours</li>
+          <li>Set Playfair Display as your headline font</li>
+          <li>Set Cormorant Garamond as your body font</li>
+          <li>Set Libre Franklin as your accent/label font</li>
+        </ul>
+      </div>
+
+      <h3 style="margin-top: 32px;">Key Brand Elements to Maintain</h3>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 16px;">
+        <div style="text-align: center; padding: 24px;">
+          <div style="font-size: 48px; margin-bottom: 12px;">✨</div>
+          <div style="font-family: 'Libre Franklin', sans-serif; font-size: 12px; font-weight: 600; margin-bottom: 8px;">Elegant & Approachable</div>
+          <div style="font-size: 13px; color: #7D756E;">Luxurious feel without being intimidating</div>
+        </div>
+        <div style="text-align: center; padding: 24px;">
+          <div style="font-size: 48px; margin-bottom: 12px;">🎯</div>
+          <div style="font-family: 'Libre Franklin', sans-serif; font-size: 12px; font-weight: 600; margin-bottom: 8px;">Coral Accent Pops</div>
+          <div style="font-size: 13px; color: #7D756E;">Use #E8614D for CTAs and emphasis</div>
+        </div>
+        <div style="text-align: center; padding: 24px;">
+          <div style="font-size: 48px; margin-bottom: 12px;">💫</div>
+          <div style="font-family: 'Libre Franklin', sans-serif; font-size: 12px; font-weight: 600; margin-bottom: 8px;">Gold Accents</div>
+          <div style="font-size: 13px; color: #7D756E;">Use #C9A962 for decorative elements</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Copy hex code to clipboard on click
+    document.querySelectorAll('.color-hex').forEach(el => {
+      el.style.cursor = 'pointer';
+      el.title = 'Click to copy';
+      el.addEventListener('click', () => {
+        navigator.clipboard.writeText('#' + el.textContent);
+        const original = el.textContent;
+        el.textContent = 'Copied!';
+        setTimeout(() => el.textContent = original, 1000);
+      });
+    });
+  </script>
+</body>
+</html>
