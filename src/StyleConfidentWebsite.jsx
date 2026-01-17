@@ -955,7 +955,7 @@ const StyleConfidentWebsite = () => {
               letterSpacing: '0.1em',
               color: p.neutralLight,
               marginTop: '32px'
-            }}>Kelly Harvey-Welsh · Personal Stylist · M&S Battersea</p>
+            }}>Kelly Harvey-Welsh · Independent Personal Stylist</p>
 
           </div>
         </div>
@@ -1236,7 +1236,7 @@ const StyleConfidentWebsite = () => {
             alignItems: 'flex-end'
           }}>
             {[
-              { label: 'Currently At', value: 'M&S Battersea Personal Stylist' },
+              { label: 'Also At', value: 'M&S Battersea (Mon, Tue, Thu)' },
               { label: 'Fashion Training', value: 'London College of Style' },
               { label: 'Client TV Styling', value: 'This Morning, My Mum Your Dad' },
               { label: 'Previously', value: 'Owner, The Secret Dress House, Reigate (2013-2018)' }
@@ -1348,8 +1348,7 @@ const StyleConfidentWebsite = () => {
                 lineHeight: '1.6',
                 marginBottom: '24px'
               }}>
-                "When I'm not styling clients privately, I'm the official personal stylist
-                for M&S Battersea — catch me on their TikTok channel!"
+                "Style Confident is my independent styling practice. You can also find me as the official personal stylist at M&S Battersea on Mondays, Tuesdays & Thursdays!"
               </p>
 
               {/* TikTok Videos */}
