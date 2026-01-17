@@ -1236,7 +1236,7 @@ const StyleConfidentWebsite = () => {
             alignItems: 'flex-end'
           }}>
             {[
-              { label: 'Also At', value: 'M&S Battersea (Mon, Tue, Thu)' },
+              { label: 'Also At', value: 'M&S Battersea (Official Stylist)' },
               { label: 'Fashion Training', value: 'London College of Style' },
               { label: 'Client TV Styling', value: 'This Morning, My Mum Your Dad' },
               { label: 'Previously', value: 'Owner, The Secret Dress House, Reigate (2013-2018)' }
@@ -1348,7 +1348,7 @@ const StyleConfidentWebsite = () => {
                 lineHeight: '1.6',
                 marginBottom: '24px'
               }}>
-                "Style Confident is my independent styling practice. You can also find me as the official personal stylist at M&S Battersea on Mondays, Tuesdays & Thursdays!"
+                "Style Confident is my independent styling practice. I'm also the official personal stylist at M&S Battersea — catch me on their TikTok!"
               </p>
 
               {/* TikTok Videos */}
