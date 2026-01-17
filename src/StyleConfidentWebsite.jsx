@@ -673,6 +673,7 @@ const StyleConfidentWebsite = () => {
             src="/images/style-confident-logo.jpg"
             alt="Style Confident Logo"
             className="nav-logo"
+            loading="eager"
             style={{
               width: '70px',
               height: '70px',
@@ -826,6 +827,7 @@ const StyleConfidentWebsite = () => {
               src="/images/KellyWelshpicked2024_19.jpg"
               alt="Kelly Harvey-Welsh - Personal Stylist"
               className="hero-photo"
+              loading="eager"
               style={{
                 width: '100%',
                 maxWidth: '400px',
@@ -876,8 +878,8 @@ const StyleConfidentWebsite = () => {
               marginBottom: '16px',
               maxWidth: '440px'
             }}>
-              For busy women whose bodies, lives, or wardrobes have changed —
-              I'll help you build a style that actually works.
+              For busy women ready to rediscover their style —
+              I'll help you build a look that fits your life now.
             </p>
 
             {/* Second quote */}
@@ -950,7 +952,154 @@ const StyleConfidentWebsite = () => {
               letterSpacing: '0.1em',
               color: p.neutralLight,
               marginTop: '32px'
-            }}>Kelly Harvey-Welsh · Personal Stylist</p>
+            }}>Kelly Harvey-Welsh · Personal Stylist · M&S Battersea</p>
+
+            {/* As Featured In */}
+            <a
+              href="https://www.thesun.co.uk/fabulous/37928155/marks-and-spencer-jean-guide-ditching-skinnies/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                marginTop: '20px',
+                padding: '10px 18px',
+                background: 'linear-gradient(135deg, #FFFBF7 0%, #FFF5EE 100%)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                border: '1px solid rgba(200, 50, 50, 0.1)',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
+              }}
+            >
+              <span style={{
+                fontFamily: "'Libre Franklin', sans-serif",
+                fontSize: '9px',
+                fontWeight: '600',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                color: p.neutral
+              }}>As Featured In</span>
+              <span style={{
+                fontFamily: 'Georgia, serif',
+                fontWeight: '700',
+                fontSize: '16px',
+                color: '#C8102E',
+                textTransform: 'uppercase',
+                letterSpacing: '-0.5px'
+              }}>The Sun</span>
+              <span style={{
+                fontFamily: "'Libre Franklin', sans-serif",
+                fontSize: '11px',
+                fontWeight: '500',
+                color: p.primary,
+                paddingLeft: '8px',
+                borderLeft: `1px solid ${p.neutralLight}`
+              }}>Fashion</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* As Seen In Press Bar */}
+      <section style={{
+        backgroundColor: p.secondary,
+        padding: '32px 40px',
+        borderTop: `1px solid ${p.neutralLight}20`,
+        borderBottom: `1px solid ${p.neutralLight}20`
+      }}>
+        <div style={{
+          maxWidth: '900px',
+          margin: '0 auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '48px',
+          flexWrap: 'wrap'
+        }}>
+          <span style={{
+            fontFamily: "'Libre Franklin', sans-serif",
+            fontSize: '10px',
+            fontWeight: '600',
+            letterSpacing: '0.2em',
+            textTransform: 'uppercase',
+            color: p.neutral
+          }}>As Seen In</span>
+
+          <a
+            href="https://www.thesun.co.uk/fabulous/37928155/marks-and-spencer-jean-guide-ditching-skinnies/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              textDecoration: 'none',
+              padding: '12px 24px',
+              background: 'white',
+              borderRadius: '8px',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+              transition: 'all 0.2s ease'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
+            }}
+          >
+            <span style={{
+              fontFamily: 'Georgia, serif',
+              fontWeight: '700',
+              fontSize: '22px',
+              color: '#C8102E',
+              textTransform: 'uppercase',
+              letterSpacing: '-0.5px'
+            }}>The Sun</span>
+            <span style={{
+              fontFamily: "'Libre Franklin', sans-serif",
+              fontSize: '12px',
+              color: p.neutral,
+              paddingLeft: '12px',
+              borderLeft: `1px solid ${p.neutralLight}`
+            }}>"The ultimate jeans guide"</span>
+          </a>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            opacity: 0.7
+          }}>
+            <span style={{
+              fontFamily: "'Libre Franklin', sans-serif",
+              fontSize: '13px',
+              fontWeight: '500',
+              color: p.neutral
+            }}>M&S Official Stylist</span>
+            <span style={{
+              width: '4px',
+              height: '4px',
+              borderRadius: '50%',
+              backgroundColor: p.neutralLight
+            }}></span>
+            <span style={{
+              fontFamily: "'Libre Franklin', sans-serif",
+              fontSize: '13px',
+              fontWeight: '500',
+              color: p.neutral
+            }}>Battersea Power Station</span>
           </div>
         </div>
       </section>
@@ -988,7 +1137,7 @@ const StyleConfidentWebsite = () => {
             textAlign: 'left'
           }}>
             {[
-              { title: "Nothing Fits Like It Used To", text: "Your body has changed — whether after babies, life changes, or just time — and your old clothes don't feel like 'you' anymore." },
+              { title: "Your Life Has Evolved", text: "New job, new chapter, new priorities — but your wardrobe hasn't caught up. Your old clothes just don't feel like 'you' anymore." },
               { title: "You've Lost Your Style Identity", text: "You used to know what you liked. Now you default to the same safe outfits and wonder where 'you' went." },
               { title: "Shopping Leaves You Empty-Handed", text: "You walk into shops full of hope and leave with nothing. Or worse — another mistake hanging in your wardrobe with the tags still on." }
             ].map((item, i) => (
@@ -1027,7 +1176,7 @@ const StyleConfidentWebsite = () => {
             margin: '0 auto'
           }}>
             No judgement. No pressure to buy designer. Just honest guidance that works
-            for your body, your budget, and your real life.
+            for your style, your budget, and your real life.
           </p>
         </div>
       </section>
@@ -1073,6 +1222,7 @@ const StyleConfidentWebsite = () => {
             src="/images/KellyWelshpicked2024-removebg-preview.png"
             alt="Kelly Harvey-Welsh - Meet Your Stylist"
             className="about-image"
+            loading="lazy"
             style={{
               width: '100%',
               maxWidth: '380px',
@@ -1755,6 +1905,7 @@ const StyleConfidentWebsite = () => {
           <img
             src="/images/CallyBorgSalonstyles2025_37_(2).jpeg"
             alt="Kelly Harvey-Welsh - Bridal Styling Consultation"
+            loading="lazy"
             style={{
               width: '100%',
               maxWidth: '400px',
@@ -1861,6 +2012,127 @@ const StyleConfidentWebsite = () => {
           }}>Let's Chat</button>
       </section>
 
+      {/* Instagram Section */}
+      <section style={{
+        backgroundColor: p.secondary,
+        padding: '80px 40px',
+        textAlign: 'center'
+      }}>
+        <p style={{
+          fontFamily: "'Libre Franklin', sans-serif",
+          fontSize: '10px',
+          fontWeight: '600',
+          letterSpacing: '0.25em',
+          textTransform: 'uppercase',
+          color: p.accent1,
+          marginBottom: '12px'
+        }}>Follow Along</p>
+        <h2 style={{
+          fontFamily: "'Playfair Display', serif",
+          fontSize: '36px',
+          fontWeight: '500',
+          color: p.primary,
+          marginBottom: '12px'
+        }}>@iamkellyhw.thestylist</h2>
+        <p style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: '18px',
+          color: p.neutral,
+          marginBottom: '32px',
+          maxWidth: '500px',
+          margin: '0 auto 32px'
+        }}>Daily style tips, behind-the-scenes, and real client transformations</p>
+
+        {/* Instagram Grid Placeholder */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(6, 1fr)',
+          gap: '8px',
+          maxWidth: '900px',
+          margin: '0 auto 32px'
+        }}>
+          {[
+            { bg: 'linear-gradient(135deg, #E8614D 0%, #C9A962 100%)', label: 'Style Tips' },
+            { bg: 'linear-gradient(135deg, #FAF7F4 0%, #E8DFD0 100%)', label: 'Neutrals' },
+            { bg: 'linear-gradient(135deg, #2D2926 0%, #4A4139 100%)', label: 'Outfits' },
+            { bg: 'linear-gradient(135deg, #C9A962 0%, #E8614D 100%)', label: 'Colour' },
+            { bg: 'linear-gradient(135deg, #7D756E 0%, #B8B2AA 100%)', label: 'BTS' },
+            { bg: 'linear-gradient(135deg, #E8614D 0%, #FAF7F4 100%)', label: 'Tips' }
+          ].map((item, i) => (
+            <a
+              key={i}
+              href="https://www.instagram.com/iamkellyhw.thestylist/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                aspectRatio: '1',
+                background: item.bg,
+                borderRadius: '8px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05)';
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.15)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <span style={{
+                fontFamily: "'Libre Franklin', sans-serif",
+                fontSize: '11px',
+                fontWeight: '600',
+                color: 'white',
+                textShadow: '0 1px 3px rgba(0,0,0,0.3)',
+                letterSpacing: '0.05em'
+              }}>{item.label}</span>
+            </a>
+          ))}
+        </div>
+
+        <a
+          href="https://www.instagram.com/iamkellyhw.thestylist/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            padding: '14px 28px',
+            backgroundColor: p.primary,
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '32px',
+            fontFamily: "'Libre Franklin', sans-serif",
+            fontSize: '12px',
+            fontWeight: '600',
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.2)';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = 'none';
+          }}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          Follow on Instagram
+        </a>
+      </section>
+
       {/* Footer */}
       <footer style={{
         backgroundColor: p.primary,
@@ -1879,6 +2151,7 @@ const StyleConfidentWebsite = () => {
               <img
                 src="/images/style-confident-logo.jpg"
                 alt="Style Confident Logo"
+                loading="lazy"
                 style={{
                   width: '65px',
                   height: '65px',
