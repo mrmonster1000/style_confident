@@ -1211,9 +1211,9 @@ const StyleConfidentWebsite = () => {
             lineHeight: '1.7',
             marginBottom: '20px'
           }}>
-            "I've been where you are. After my second baby, I'd stand in front of
-            my wardrobe feeling completely lost. Nothing fit. Nothing felt like
-            'me'. I'd given so much to everyone else that I'd forgotten who I was
+            "I've been where you are. There came a point where I'd stand in front of
+            my wardrobe feeling completely lost. Nothing felt right. Nothing felt like
+            'me'. Life had changed, and somewhere along the way, I'd forgotten who I was
             when I looked in the mirror.
           </p>
           <p style={{
