@@ -8,8 +8,7 @@ const StyleConfidentWebsite = () => {
   const [showBookingModal, setShowBookingModal] = useState(false);
 
   // Cal.com Configuration - Kelly: Replace with your Cal.com username
-  const calUsername = "kelly-style-confident"; // Change this to your Cal.com username
-  const calBookingUrl = `https://cal.com/${calUsername}/consultation`;
+  const calBookingUrl = "https://app.cal.eu/styleconfident.co.uk/consultation";
 
   const defaultPalettes = [
     {
