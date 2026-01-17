@@ -133,11 +133,12 @@ const StyleConfidentWebsite = () => {
         .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: currentColor; transition: width 0.3s ease; }
         .nav-link:hover::after { width: 100%; }
         
-        .settings-panel { 
-          position: fixed; 
-          bottom: 24px; 
-          right: 24px; 
+        .settings-panel {
+          position: fixed;
+          bottom: 24px;
+          right: 24px;
           z-index: 1000;
+          display: none; /* Hidden - remove this line to show theme picker */
         }
         
         .settings-btn {
@@ -954,58 +955,6 @@ const StyleConfidentWebsite = () => {
               marginTop: '32px'
             }}>Kelly Harvey-Welsh · Personal Stylist · M&S Battersea</p>
 
-            {/* As Featured In */}
-            <a
-              href="https://www.thesun.co.uk/fabulous/37928155/marks-and-spencer-jean-guide-ditching-skinnies/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '10px',
-                marginTop: '20px',
-                padding: '10px 18px',
-                background: 'linear-gradient(135deg, #FFFBF7 0%, #FFF5EE 100%)',
-                borderRadius: '8px',
-                textDecoration: 'none',
-                border: '1px solid rgba(200, 50, 50, 0.1)',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
-              }}
-            >
-              <span style={{
-                fontFamily: "'Libre Franklin', sans-serif",
-                fontSize: '9px',
-                fontWeight: '600',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: p.neutral
-              }}>As Featured In</span>
-              <span style={{
-                fontFamily: 'Georgia, serif',
-                fontWeight: '700',
-                fontSize: '16px',
-                color: '#C8102E',
-                textTransform: 'uppercase',
-                letterSpacing: '-0.5px'
-              }}>The Sun</span>
-              <span style={{
-                fontFamily: "'Libre Franklin', sans-serif",
-                fontSize: '11px',
-                fontWeight: '500',
-                color: p.primary,
-                paddingLeft: '8px',
-                borderLeft: `1px solid ${p.neutralLight}`
-              }}>Fashion</span>
-            </a>
           </div>
         </div>
       </section>
