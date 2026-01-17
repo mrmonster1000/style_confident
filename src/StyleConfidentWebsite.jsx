@@ -996,19 +996,13 @@ const StyleConfidentWebsite = () => {
               alignItems: 'center',
               gap: '8px',
               textDecoration: 'none',
-              padding: '12px 24px',
-              background: 'white',
-              borderRadius: '8px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-              transition: 'all 0.2s ease'
+              transition: 'opacity 0.2s ease'
             }}
             onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
+              e.currentTarget.style.opacity = '0.7';
             }}
             onMouseOut={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
+              e.currentTarget.style.opacity = '1';
             }}
           >
             <span style={{
