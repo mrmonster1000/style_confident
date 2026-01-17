@@ -784,7 +784,8 @@ const StyleConfidentWebsite = () => {
           height: '200px',
           borderRadius: '50%',
           border: `3px solid ${p.accent2}`,
-          opacity: 0.25
+          opacity: 0.25,
+          pointerEvents: 'none'
         }} />
         <div style={{
           position: 'absolute',
@@ -794,7 +795,8 @@ const StyleConfidentWebsite = () => {
           height: '100px',
           borderRadius: '50%',
           backgroundColor: p.accent1,
-          opacity: 0.1
+          opacity: 0.1,
+          pointerEvents: 'none'
         }} />
         <div style={{
           position: 'absolute',
@@ -804,7 +806,8 @@ const StyleConfidentWebsite = () => {
           height: '60px',
           borderRadius: '50%',
           backgroundColor: p.accent2,
-          opacity: 0.2
+          opacity: 0.2,
+          pointerEvents: 'none'
         }} />
 
         {/* Main hero content - two column */}
@@ -1154,7 +1157,8 @@ const StyleConfidentWebsite = () => {
             height: '120px',
             borderRadius: '50%',
             border: `2px solid ${p.accent2}`,
-            opacity: 0.3
+            opacity: 0.3,
+            pointerEvents: 'none'
           }} />
           <div style={{
             position: 'absolute',
@@ -1164,7 +1168,8 @@ const StyleConfidentWebsite = () => {
             height: '80px',
             borderRadius: '50%',
             backgroundColor: p.accent1,
-            opacity: 0.1
+            opacity: 0.1,
+            pointerEvents: 'none'
           }} />
 
           <img
