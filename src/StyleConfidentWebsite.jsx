@@ -881,7 +881,7 @@ const StyleConfidentWebsite = () => {
               marginBottom: '16px',
               maxWidth: '440px'
             }}>
-              For busy women ready to rediscover their style —
+              For women ready to rediscover their style —
               I'll help you build a look that fits your life now.
             </p>
 
@@ -1032,7 +1032,7 @@ const StyleConfidentWebsite = () => {
               fontSize: '13px',
               fontWeight: '500',
               color: p.neutral
-            }}>M&S Official Stylist</span>
+            }}>Stylist for M&S</span>
             <span style={{
               width: '4px',
               height: '4px',
@@ -1236,7 +1236,7 @@ const StyleConfidentWebsite = () => {
             alignItems: 'flex-end'
           }}>
             {[
-              { label: 'Also At', value: 'M&S Battersea (Official Stylist)' },
+              { label: 'Also At', value: 'M&S Battersea (Stylist)' },
               { label: 'Fashion Training', value: 'London College of Style' },
               { label: 'Client TV Styling', value: 'This Morning, My Mum Your Dad' },
               { label: 'Previously', value: 'Owner, The Secret Dress House, Reigate (2013-2018)' }
@@ -1331,7 +1331,7 @@ const StyleConfidentWebsite = () => {
                     fontSize: '12px',
                     fontWeight: '600',
                     color: p.primary
-                  }}>Official Personal Stylist</p>
+                  }}>Personal Stylist</p>
                   <p style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontSize: '14px',
@@ -1348,7 +1348,7 @@ const StyleConfidentWebsite = () => {
                 lineHeight: '1.6',
                 marginBottom: '24px'
               }}>
-                "Style Confident is my independent styling practice. I'm also the official personal stylist at M&S Battersea — catch me on their TikTok!"
+                "Style Confident is my independent styling practice. I'm also the stylist for M&S Battersea — catch me on their TikTok!"
               </p>
 
               {/* TikTok Videos */}
