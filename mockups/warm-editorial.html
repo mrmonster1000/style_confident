@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Confident — Concept: Warm Editorial</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Karla:wght@300;400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --ivory: #FBF5EC;
+        --peach: #F6E7D9;
+        --ink: #2B2420;
+        --ink-soft: #51453D;
+        --coral: #E8614D;
+        --coral-deep: #D14E3A;
+        --gold: #C9A962;
+        --stone: #847A70;
+        --stone-light: #BDB3A7;
+        --white: #FFFDFA;
+
+        --serif: 'Fraunces', Georgia, serif;
+        --sans: 'Karla', -apple-system, sans-serif;
+        --hand: 'Caveat', cursive;
+
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: var(--sans);
+        background: var(--ivory);
+        color: var(--ink);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { max-width: 100%; display: block; }
+      a { color: inherit; }
+
+      .serif { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; }
+      .hand { font-family: var(--hand); }
+
+      .eyebrow {
+        font-family: var(--sans);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--coral);
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--sans);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        border-radius: 999px;
+        padding: 17px 34px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), background 0.25s;
+      }
+      .btn--coral { background: var(--coral); color: #fff; box-shadow: 0 2px 0 var(--coral-deep); }
+      .btn--coral:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(232, 97, 77, 0.35); }
+      .btn--soft { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+      .btn--soft:hover { background: var(--ink); color: var(--ivory); transform: translateY(-2px); }
+
+      /* ---------- Nav ---------- */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(251, 245, 236, 0.94);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(43, 36, 32, 0.07);
+        padding: 18px clamp(20px, 4vw, 44px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav__brand { text-decoration: none; line-height: 1.05; }
+      .nav__brand b {
+        font-family: var(--serif);
+        font-size: 23px;
+        font-weight: 500;
+        display: block;
+        color: var(--ink);
+      }
+      .nav__brand small {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--stone);
+      }
+      .nav__links { display: flex; gap: 30px; align-items: center; }
+      .nav__links a:not(.btn) {
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--ink-soft);
+      }
+      .nav__links .btn { padding: 12px 24px; font-size: 13px; }
+      @media (max-width: 880px) { .nav__links a:not(.btn) { display: none; } }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(40px, 6vw, 90px) clamp(20px, 4vw, 44px) 0;
+      }
+      .hero__inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(28px, 4vw, 60px);
+        align-items: center;
+      }
+      .hero__kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--white);
+        border: 1px solid rgba(43, 36, 32, 0.08);
+        box-shadow: 0 2px 10px rgba(43, 36, 32, 0.05);
+        border-radius: 999px;
+        padding: 9px 18px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink-soft);
+        margin-bottom: 28px;
+      }
+      .hero__kicker i {
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        background: var(--coral);
+        flex: none;
+      }
+      .hero h1 {
+        font-family: var(--serif);
+        font-size: clamp(44px, 6.2vw, 78px);
+        font-weight: 400;
+        line-height: 1.04;
+        letter-spacing: -0.02em;
+        margin-bottom: 26px;
+      }
+      .hero h1 em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--coral);
+        position: relative;
+        white-space: nowrap;
+      }
+      .hero h1 em svg {
+        position: absolute;
+        left: 0; bottom: -14px;
+        width: 100%;
+      }
+      .hero__sub {
+        font-size: 19px;
+        line-height: 1.65;
+        color: var(--ink-soft);
+        max-width: 480px;
+        margin-bottom: 30px;
+        font-weight: 400;
+      }
+      .hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 26px; }
+      .hero__note {
+        font-family: var(--hand);
+        font-size: 21px;
+        color: var(--ink-soft);
+        transform: rotate(-1.5deg);
+        display: inline-block;
+      }
+      .hero__trust {
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+        margin-top: 34px;
+        padding-top: 24px;
+        border-top: 1px dashed rgba(43, 36, 32, 0.18);
+      }
+      .hero__trust span {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--stone);
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .hero__trust b { color: var(--gold); font-weight: 700; }
+
+      .hero__figure { position: relative; justify-self: center; }
+      .hero__photo {
+        width: 100%;
+        max-width: 430px;
+        height: auto;
+        border-radius: 46% 46% 32px 32px / 38% 38% 32px 32px;
+        box-shadow: 0 30px 70px rgba(43, 36, 32, 0.18);
+      }
+      .hero__figure::before {
+        content: '';
+        position: absolute;
+        inset: 18px -16px -16px 18px;
+        border-radius: 46% 46% 36px 36px / 38% 38% 36px 36px;
+        background: var(--peach);
+        z-index: -1;
+      }
+      .hero__sticker {
+        position: absolute;
+        top: -10px; right: -8px;
+        background: var(--white);
+        border: 1px solid rgba(43, 36, 32, 0.08);
+        box-shadow: 0 10px 26px rgba(43, 36, 32, 0.12);
+        border-radius: 16px;
+        padding: 12px 18px;
+        transform: rotate(3deg);
+      }
+      .hero__sticker .hand { font-size: 22px; color: var(--ink); display: block; line-height: 1.1; }
+      .hero__sticker small { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); }
+      .hero__price-chip {
+        position: absolute;
+        bottom: 26px; left: -22px;
+        background: var(--ink);
+        color: var(--ivory);
+        border-radius: 14px;
+        padding: 12px 18px;
+        box-shadow: 0 14px 30px rgba(43, 36, 32, 0.25);
+        transform: rotate(-2deg);
+      }
+      .hero__price-chip b { font-family: var(--serif); font-size: 20px; font-weight: 500; display: block; }
+      .hero__price-chip small { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--stone-light); }
+
+      @media (max-width: 880px) {
+        .hero__inner { grid-template-columns: 1fr; text-align: center; }
+        .hero__figure { order: -1; max-width: 320px; }
+        .hero__sub { margin-inline: auto; }
+        .hero__ctas { justify-content: center; }
+        .hero__trust { justify-content: center; }
+        .hero__price-chip { left: -8px; }
+      }
+
+      /* ---------- Marquee ---------- */
+      .marquee {
+        margin-top: clamp(48px, 6vw, 80px);
+        background: var(--coral);
+        color: #fff;
+        overflow: hidden;
+        padding: 14px 0;
+        transform: rotate(-1deg) scale(1.02);
+      }
+      .marquee__track {
+        display: flex;
+        gap: 44px;
+        white-space: nowrap;
+        animation: scroll 28s linear infinite;
+        width: max-content;
+      }
+      .marquee__track span {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 17px;
+        display: inline-flex;
+        align-items: center;
+        gap: 44px;
+      }
+      .marquee__track span::after { content: '✦'; font-style: normal; font-size: 12px; opacity: 0.8; }
+      @keyframes scroll { to { transform: translateX(-50%); } }
+
+      /* ---------- Press ---------- */
+      .press {
+        padding: 30px clamp(20px, 4vw, 44px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(20px, 4vw, 52px);
+        flex-wrap: wrap;
+      }
+      .press small {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--stone);
+      }
+      .press .sun { font-family: Georgia, serif; font-weight: 700; font-size: 21px; color: #C8102E; text-transform: uppercase; }
+      .press span { font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+
+      /* ---------- Problem ---------- */
+      .problem {
+        background: var(--ink);
+        color: var(--ivory);
+        padding: clamp(70px, 9vw, 110px) clamp(20px, 4vw, 44px);
+        border-radius: 40px;
+        margin: 0 clamp(10px, 1.6vw, 24px);
+      }
+      .problem__inner { max-width: 1020px; margin: 0 auto; text-align: center; }
+      .problem h2 {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: clamp(30px, 4vw, 50px);
+        line-height: 1.15;
+        margin-bottom: 18px;
+      }
+      .problem h2 em { font-style: italic; color: var(--gold); }
+      .problem__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin: 52px 0 44px;
+        text-align: left;
+      }
+      .problem__card {
+        background: rgba(251, 245, 236, 0.06);
+        border: 1px solid rgba(251, 245, 236, 0.1);
+        border-radius: 22px;
+        padding: 28px 26px;
+      }
+      .problem__card .hand { font-size: 24px; color: var(--gold); display: block; margin-bottom: 10px; }
+      .problem__card h3 { font-family: var(--serif); font-weight: 500; font-size: 20px; margin-bottom: 10px; }
+      .problem__card p { font-size: 15px; line-height: 1.7; color: var(--stone-light); }
+      .problem__promise { font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2.4vw, 26px); color: var(--gold); margin-bottom: 14px; }
+      .problem__note { font-size: 14px; color: var(--stone-light); max-width: 460px; margin: 0 auto; }
+      @media (max-width: 880px) { .problem__cards { grid-template-columns: 1fr; } }
+
+      /* ---------- About ---------- */
+      .about {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: clamp(70px, 9vw, 120px) clamp(20px, 4vw, 44px);
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: clamp(30px, 5vw, 70px);
+        align-items: center;
+      }
+      .about__figure { position: relative; }
+      .about__photo {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        border-radius: 28px;
+        background: var(--peach);
+        padding: 20px 20px 0;
+      }
+      .about__tape {
+        position: absolute;
+        top: -14px; left: 50%;
+        transform: translateX(-50%) rotate(-3deg);
+        width: 110px; height: 30px;
+        background: rgba(201, 169, 98, 0.45);
+        border-radius: 2px;
+      }
+      .about h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.4vw, 52px); margin-bottom: 24px; }
+      .about h2 .hand { font-size: 0.62em; color: var(--coral); display: inline-block; transform: rotate(-2deg); }
+      .about p { font-size: 17px; line-height: 1.8; color: var(--ink-soft); margin-bottom: 18px; max-width: 540px; }
+      .about__creds { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+      .about__creds span {
+        font-size: 12.5px;
+        font-weight: 700;
+        background: var(--white);
+        border: 1px solid rgba(43, 36, 32, 0.1);
+        border-radius: 999px;
+        padding: 9px 16px;
+        color: var(--ink-soft);
+      }
+      @media (max-width: 880px) {
+        .about { grid-template-columns: 1fr; text-align: center; }
+        .about__figure { max-width: 280px; margin: 0 auto; }
+        .about p { margin-inline: auto; }
+        .about__creds { justify-content: center; }
+      }
+
+      /* ---------- Services ---------- */
+      .services {
+        background: var(--peach);
+        border-radius: 40px;
+        margin: 0 clamp(10px, 1.6vw, 24px);
+        padding: clamp(70px, 9vw, 110px) clamp(20px, 4vw, 44px);
+      }
+      .services__head { text-align: center; max-width: 620px; margin: 0 auto 24px; }
+      .services__head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.4vw, 52px); margin-bottom: 16px; }
+      .services__head p { font-size: 18px; color: var(--ink-soft); }
+      .services__honest {
+        text-align: center;
+        font-family: var(--hand);
+        font-size: 22px;
+        color: var(--ink-soft);
+        margin-bottom: 44px;
+        transform: rotate(-1deg);
+      }
+      .services__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+      .svc {
+        background: var(--white);
+        border-radius: 24px;
+        padding: 30px 28px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(43, 36, 32, 0.05);
+        transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+      }
+      .svc:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(43, 36, 32, 0.12); }
+      .svc__badge {
+        position: absolute;
+        top: -12px; right: 20px;
+        background: var(--ink);
+        color: var(--ivory);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border-radius: 999px;
+        padding: 6px 14px;
+        transform: rotate(2deg);
+      }
+      .svc h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin-bottom: 10px; }
+      .svc p { font-size: 15px; line-height: 1.65; color: var(--ink-soft); flex: 1; margin-bottom: 22px; }
+      .svc__meta { display: flex; align-items: baseline; justify-content: space-between; border-top: 1px dashed rgba(43, 36, 32, 0.18); padding-top: 16px; }
+      .svc__meta small { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); }
+      .svc__price { font-family: var(--serif); font-size: 26px; font-weight: 500; color: var(--coral); }
+      .svc__price small { font-size: 13px; color: var(--stone); font-family: var(--sans); letter-spacing: 0; text-transform: none; font-weight: 600; }
+      .services__cta { text-align: center; margin-top: 44px; }
+      @media (max-width: 980px) { .services__grid { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 640px) { .services__grid { grid-template-columns: 1fr; } }
+
+      /* ---------- Testimonials ---------- */
+      .kind {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: clamp(70px, 9vw, 110px) clamp(20px, 4vw, 44px);
+        text-align: center;
+      }
+      .kind h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.4vw, 52px); margin-bottom: 46px; }
+      .kind__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; text-align: left; }
+      .kind__card {
+        background: var(--white);
+        border: 1px solid rgba(43, 36, 32, 0.06);
+        border-radius: 24px;
+        padding: 30px 28px;
+        box-shadow: 0 6px 20px rgba(43, 36, 32, 0.05);
+      }
+      .kind__card:nth-child(2) { transform: rotate(0.8deg); }
+      .kind__card:nth-child(3) { transform: rotate(-0.8deg); }
+      .kind__stars { color: var(--gold); letter-spacing: 3px; font-size: 15px; margin-bottom: 14px; }
+      .kind__card blockquote { font-family: var(--serif); font-size: 18px; font-style: italic; line-height: 1.6; margin-bottom: 18px; }
+      .kind__card figcaption b { font-size: 13px; font-weight: 700; display: block; }
+      .kind__card figcaption span { font-size: 13px; color: var(--stone); }
+      @media (max-width: 880px) { .kind__grid { grid-template-columns: 1fr; } }
+
+      /* ---------- CTA ---------- */
+      .cta {
+        background: var(--coral);
+        border-radius: 40px;
+        margin: 0 clamp(10px, 1.6vw, 24px) clamp(20px, 3vw, 40px);
+        padding: clamp(70px, 9vw, 110px) clamp(20px, 4vw, 44px);
+        text-align: center;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta::before {
+        content: '';
+        position: absolute;
+        top: -120px; right: -80px;
+        width: 320px; height: 320px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .cta h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.6vw, 54px); margin-bottom: 18px; }
+      .cta p { font-size: 18px; max-width: 480px; margin: 0 auto 34px; color: rgba(255, 255, 255, 0.94); }
+      .cta .btn { background: var(--ivory); color: var(--ink); font-size: 15px; padding: 19px 42px; }
+      .cta .hand { display: block; font-size: 23px; margin-top: 18px; color: rgba(255, 255, 255, 0.95); transform: rotate(-1.5deg); }
+
+      /* ---------- Footer ---------- */
+      .footer {
+        padding: 40px clamp(20px, 4vw, 44px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .footer b { font-family: var(--serif); font-weight: 500; font-size: 17px; }
+      .footer p, .footer a { font-size: 13px; color: var(--stone); text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="nav__brand" href="#">
+        <b>Style Confident</b>
+        <small>by Kelly Harvey-Welsh</small>
+      </a>
+      <div class="nav__links">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Bridal</a>
+        <a href="#">FAQ</a>
+        <a href="#" class="btn btn--coral">Book a free call</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero__inner">
+        <div>
+          <span class="hero__kicker"><i></i> Personal stylist · London, Surrey &amp; online</span>
+          <h1>Finally feel like <em>yourself again
+            <svg viewBox="0 0 200 12" fill="none" preserveAspectRatio="none"><path d="M3 9C45 3.5 120 2 197 6.5" stroke="#E8614D" stroke-width="4" stroke-linecap="round"/></svg>
+          </em></h1>
+          <p class="hero__sub">
+            For women ready to rediscover their style — I'll help you build
+            a look that fits your life now.
+          </p>
+          <div class="hero__ctas">
+            <a href="#" class="btn btn--coral">Book a free 15-min call</a>
+            <a href="#" class="btn btn--soft">See services &amp; prices</a>
+          </div>
+          <span class="hero__note">— no pressure, no hard sell, just a chat ☺</span>
+          <div class="hero__trust">
+            <span><b>★★★★★</b> 30+ five-star reviews</span>
+            <span>Stylist for M&amp;S Battersea</span>
+            <span>As seen in The Sun</span>
+          </div>
+        </div>
+
+        <figure class="hero__figure">
+          <img class="hero__photo" src="images/KellyWelshpicked2024_19.jpg" alt="Kelly Harvey-Welsh, personal stylist" />
+          <span class="hero__sticker">
+            <span class="hand">Hi, I'm Kelly!</span>
+            <small>Your stylist</small>
+          </span>
+          <span class="hero__price-chip">
+            <small>Sessions from</small>
+            <b>£150</b>
+          </span>
+        </figure>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Wardrobe rescue</span><span>Personal shopping</span><span>Colour analysis</span><span>Online styling</span><span>Bridal styling</span><span>Event &amp; TV styling</span>
+          <span>Wardrobe rescue</span><span>Personal shopping</span><span>Colour analysis</span><span>Online styling</span><span>Bridal styling</span><span>Event &amp; TV styling</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="press">
+      <small>As seen in</small>
+      <span class="sun">The Sun</span>
+      <span>"The ultimate jeans guide"</span>
+      <span>Stylist for M&amp;S · Battersea Power Station</span>
+    </section>
+
+    <section class="problem">
+      <div class="problem__inner">
+        <span class="eyebrow" style="color: var(--gold)">Sound familiar?</span>
+        <h2>"I have a wardrobe full of clothes…<br /><em>and nothing to wear"</em></h2>
+        <div class="problem__cards">
+          <div class="problem__card">
+            <span class="hand">the life shift</span>
+            <h3>Your life has evolved</h3>
+            <p>New job, new chapter, new priorities — but your wardrobe hasn't caught up. Your old clothes just don't feel like 'you' anymore.</p>
+          </div>
+          <div class="problem__card">
+            <span class="hand">the lost spark</span>
+            <h3>You've lost your style identity</h3>
+            <p>You used to know what you liked. Now you default to the same safe outfits and wonder where 'you' went.</p>
+          </div>
+          <div class="problem__card">
+            <span class="hand">the shopping spiral</span>
+            <h3>Shopping leaves you empty-handed</h3>
+            <p>You walk into shops full of hope and leave with nothing. Or worse — another mistake hanging in your wardrobe with the tags still on.</p>
+          </div>
+        </div>
+        <p class="problem__promise">You deserve to feel confident every day. Let me show you how.</p>
+        <p class="problem__note">No judgement. No pressure to buy designer. Just honest guidance that works for your style, your budget, and your real life.</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <figure class="about__figure">
+        <span class="about__tape"></span>
+        <img class="about__photo" src="images/KellyWelshpicked2024-removebg-preview.png" alt="Kelly Harvey-Welsh" />
+      </figure>
+      <div>
+        <span class="eyebrow">Meet your stylist</span>
+        <h2><span class="hand">"Hi, I'm Kelly"</span><br />I've been where you are.</h2>
+        <p>There came a point where I'd stand in front of my wardrobe feeling completely lost. Nothing felt right. Nothing felt like 'me'. Life had changed, and somewhere along the way, I'd forgotten who I was when I looked in the mirror.</p>
+        <p>Finding my style again changed everything — not just how I dressed, but how I felt about myself. Now I help other women skip the years of frustration and find that confidence faster. No fashion rules, no judgement — just real solutions that work for your life.</p>
+        <div class="about__creds">
+          <span>M&amp;S Battersea · Stylist</span>
+          <span>London College of Style</span>
+          <span>TV styling: This Morning</span>
+          <span>Ex-owner, The Secret Dress House</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="services__head">
+        <span class="eyebrow">How I can help</span>
+        <h2>Simple solutions that work</h2>
+        <p>Whether you need a wardrobe clear-out, help finding clothes that actually suit you, or a wedding dress ally — I've got you.</p>
+      </div>
+      <p class="services__honest">honest prices, no surprises — and your shopping budget is always up to you</p>
+      <div class="services__grid">
+        <article class="svc">
+          <span class="svc__badge">Most booked</span>
+          <h3>Wardrobe Rescue</h3>
+          <p>We'll sort through everything you own, clear the clutter, and create outfits from pieces you'd forgotten you had.</p>
+          <div class="svc__meta"><small>3 hours</small><span class="svc__price">£250</span></div>
+        </article>
+        <article class="svc">
+          <h3>Personal Shopping</h3>
+          <p>I'll take you to shops that actually suit your style and budget — no more wandering aimlessly or buying mistakes.</p>
+          <div class="svc__meta"><small>3 hours</small><span class="svc__price">£250</span></div>
+        </article>
+        <article class="svc">
+          <h3>Colour Analysis</h3>
+          <p>Find out which colours make you look alive (and which ones drain you). Game-changer for shopping.</p>
+          <div class="svc__meta"><small>2 hours</small><span class="svc__price">£170</span></div>
+        </article>
+        <article class="svc">
+          <h3>Online Style Session</h3>
+          <p>Can't meet in person? We'll do it over video — same results, from your own wardrobe.</p>
+          <div class="svc__meta"><small>2 hours</small><span class="svc__price">£150</span></div>
+        </article>
+        <article class="svc">
+          <h3>Event &amp; Client TV Styling</h3>
+          <p>Big event coming up? TV appearance? I've styled clients for This Morning, My Mum Your Dad, and more.</p>
+          <div class="svc__meta"><small>Bespoke</small><span class="svc__price"><small>Get in touch</small></span></div>
+        </article>
+        <article class="svc">
+          <h3>Bridal Styling</h3>
+          <p>Former bridal boutique owner turned your secret weapon. From first appointment to 'the one'.</p>
+          <div class="svc__meta"><small>Bespoke</small><span class="svc__price"><small>Get in touch</small></span></div>
+        </article>
+      </div>
+      <div class="services__cta">
+        <a href="#" class="btn btn--coral">Book a consultation</a>
+      </div>
+    </section>
+
+    <section class="kind">
+      <span class="eyebrow">What clients say</span>
+      <h2>Kind words</h2>
+      <div class="kind__grid">
+        <figure class="kind__card">
+          <div class="kind__stars">★★★★★</div>
+          <blockquote>"Kelly completely transformed how I see my wardrobe. I finally feel like myself again after years of hiding in boring clothes."</blockquote>
+          <figcaption><b>Sarah M.</b><span>Wardrobe Rescue · Surrey</span></figcaption>
+        </figure>
+        <figure class="kind__card">
+          <div class="kind__stars">★★★★★</div>
+          <blockquote>"The colour analysis was life-changing! I've received more compliments in the last month than in the last year."</blockquote>
+          <figcaption><b>Emma T.</b><span>Colour Analysis · London</span></figcaption>
+        </figure>
+        <figure class="kind__card">
+          <div class="kind__stars">★★★★★</div>
+          <blockquote>"I was so nervous about personal shopping but Kelly made it fun and relaxed. I didn't waste money on mistakes."</blockquote>
+          <figcaption><b>Rachel H.</b><span>Personal Shopping · Battersea</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to love getting dressed again?</h2>
+      <p>Book a free 15-minute call. No pressure, no hard sell — just an honest chat about where you're stuck and how I can help.</p>
+      <a href="#" class="btn">Let's chat</a>
+      <span class="hand">it's free, and I'm friendly — promise!</span>
+    </section>
+
+    <footer class="footer">
+      <b>Style Confident</b>
+      <p>kelly@styleconfident.co.uk · London · Surrey · Online</p>
+      <p>© 2026 Style Confident</p>
+    </footer>
+  </body>
+</html>
