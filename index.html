@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
-    <title>Style Confident | Personal Stylist London & Surrey | Kelly Harvey-Welsh</title>
+    <title>Style Confident | Personal Stylist London &amp; Surrey | Kelly Harvey-Welsh</title>
     <meta name="title" content="Style Confident | Personal Stylist London & Surrey | Kelly Harvey-Welsh" />
     <meta name="description" content="Personal styling services in London & Surrey by Kelly Harvey-Welsh. Stylist for M&S Battersea. Wardrobe edits, colour analysis, personal shopping & bridal styling for real women. As seen styling clients for This Morning & My Mum Your Dad." />
     <meta name="keywords" content="personal stylist London, personal stylist Surrey, wardrobe edit, colour analysis, personal shopping, bridal stylist, wedding dress shopping, style consultant, fashion stylist, M&S personal stylist, Battersea, women's styling, body shape styling, capsule wardrobe" />
@@ -44,6 +44,14 @@
     <!-- Theme Color -->
     <meta name="theme-color" content="#E8614D" />
     <meta name="msapplication-TileColor" content="#E8614D" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+
+    <!-- Performance -->
+    <link rel="preload" as="image" href="/images/KellyWelshpicked2024_19.jpg" />
 
     <!-- Structured Data - LocalBusiness -->
     <script type="application/ld+json">
@@ -320,9 +328,1807 @@
       ]
     }
     </script>
+
+    <style>
+      /* ============================================================
+         Style Confident — Design System
+         Palette: Refined Luxe
+         ============================================================ */
+      :root {
+        --ink: #2D2926;
+        --ink-soft: #4A4139;
+        --cream: #FAF7F4;
+        --coral: #E8614D;
+        --coral-deep: #D44F3B;
+        --gold: #C9A962;
+        --stone: #7D756E;
+        --stone-light: #B8B2AA;
+        --bg: #FFFDFB;
+        --white: #FFFFFF;
+
+        --serif-display: 'Playfair Display', Georgia, serif;
+        --serif-text: 'Cormorant Garamond', Georgia, serif;
+        --sans: 'Libre Franklin', -apple-system, sans-serif;
+
+        --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+        --shadow-soft: 0 24px 64px rgba(45, 41, 38, 0.12);
+        --shadow-lift: 0 32px 80px rgba(45, 41, 38, 0.18);
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+      body {
+        font-family: var(--serif-text);
+        background-color: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      img { max-width: 100%; display: block; }
+      a { color: inherit; }
+      button { font: inherit; cursor: pointer; }
+      ::selection { background: var(--coral); color: #fff; }
+
+      section[id] { scroll-margin-top: 96px; }
+
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 48px); }
+
+      /* ---- Typography helpers ---- */
+      .eyebrow {
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--coral);
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+      .eyebrow::before {
+        content: '';
+        width: 28px;
+        height: 1px;
+        background: currentColor;
+        opacity: 0.6;
+      }
+      .eyebrow--centered::after {
+        content: '';
+        width: 28px;
+        height: 1px;
+        background: currentColor;
+        opacity: 0.6;
+      }
+
+      .display {
+        font-family: var(--serif-display);
+        font-weight: 500;
+        line-height: 1.12;
+        letter-spacing: -0.01em;
+      }
+
+      .lede {
+        font-family: var(--serif-text);
+        font-size: clamp(18px, 2vw, 21px);
+        color: var(--stone);
+        line-height: 1.65;
+      }
+
+      /* ---- Buttons ---- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        border-radius: 40px;
+        padding: 18px 38px;
+        border: none;
+        text-decoration: none;
+        transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out), background-color 0.25s ease, color 0.25s ease;
+        will-change: transform;
+      }
+      .btn--coral { background: var(--coral); color: #fff; }
+      .btn--coral:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(232, 97, 77, 0.38); background: var(--coral-deep); }
+      .btn--ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+      .btn--ghost:hover { transform: translateY(-3px); background: var(--ink); color: var(--cream); }
+      .btn--white { background: #fff; color: var(--coral); }
+      .btn--white:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22); }
+
+      /* ---- Scroll reveal ---- */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+        transition-delay: var(--reveal-delay, 0s);
+      }
+      .reveal.is-visible { opacity: 1; transform: none; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .reveal { opacity: 1; transform: none; transition: none; }
+        .btn, .service-card, .watch-link { transition: none !important; }
+      }
+
+      /* ============================================================
+         Navigation
+         ============================================================ */
+      .site-nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+        background: rgba(255, 253, 251, 0.92);
+        -webkit-backdrop-filter: blur(14px);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(45, 41, 38, 0.06);
+        transition: box-shadow 0.4s ease;
+      }
+      .site-nav.is-scrolled { box-shadow: 0 8px 32px rgba(45, 41, 38, 0.08); }
+      .site-nav:has(.mobile-menu.is-open) { background: var(--bg); }
+      .site-nav__inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 14px clamp(20px, 4vw, 48px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+      .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+      .brand__logo {
+        width: 58px; height: 58px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid rgba(45, 41, 38, 0.08);
+      }
+      .brand__name {
+        font-family: var(--serif-display);
+        font-size: 21px;
+        font-weight: 500;
+        color: var(--ink);
+        display: block;
+        line-height: 1.1;
+      }
+      .brand__byline {
+        font-family: var(--sans);
+        font-size: 9px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--stone);
+      }
+      .nav-links { display: flex; align-items: center; gap: 34px; }
+      .nav-links a:not(.btn) {
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--stone);
+        text-decoration: none;
+        position: relative;
+        padding: 4px 0;
+        transition: color 0.25s ease;
+      }
+      .nav-links a:not(.btn)::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%; height: 1px;
+        background: var(--coral);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.35s var(--ease-out);
+      }
+      .nav-links a:not(.btn):hover { color: var(--ink); }
+      .nav-links a:not(.btn):hover::after { transform: scaleX(1); transform-origin: left; }
+      .nav-links .btn { padding: 13px 28px; font-size: 10px; }
+
+      .nav-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 44px; height: 44px;
+        background: transparent;
+        border: none;
+        align-items: center;
+      }
+      .nav-toggle span {
+        width: 24px; height: 2px;
+        background: var(--ink);
+        border-radius: 2px;
+        transition: transform 0.3s var(--ease-out), opacity 0.3s ease;
+      }
+      .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+      .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px 24px 28px;
+        border-top: 1px solid rgba(45, 41, 38, 0.06);
+      }
+      .mobile-menu.is-open { display: flex; }
+      .mobile-menu a {
+        font-family: var(--sans);
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink);
+        text-decoration: none;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(45, 41, 38, 0.05);
+      }
+      .mobile-menu .btn { margin-top: 16px; border-bottom: none; }
+
+      /* ============================================================
+         Hero
+         ============================================================ */
+      .hero {
+        background:
+          radial-gradient(1100px 600px at 85% -10%, rgba(201, 169, 98, 0.14), transparent 60%),
+          radial-gradient(800px 500px at -10% 110%, rgba(232, 97, 77, 0.08), transparent 55%),
+          var(--cream);
+        padding-top: 88px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero__decor-ring {
+        position: absolute;
+        top: 8%; right: 12%;
+        width: 220px; height: 220px;
+        border-radius: 50%;
+        border: 2px solid var(--gold);
+        opacity: 0.3;
+        pointer-events: none;
+      }
+      .hero__decor-dot {
+        position: absolute;
+        bottom: 12%; right: 30%;
+        width: 110px; height: 110px;
+        border-radius: 50%;
+        background: var(--coral);
+        opacity: 0.08;
+        pointer-events: none;
+      }
+      .hero__grid {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: clamp(32px, 5vw, 72px);
+        align-items: center;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: clamp(40px, 6vw, 80px) clamp(24px, 5vw, 48px) clamp(48px, 7vw, 96px);
+      }
+      .hero__figure { position: relative; display: flex; justify-content: center; }
+      .hero__figure::before {
+        content: '';
+        position: absolute;
+        inset: 24px -18px -18px 24px;
+        border-radius: 999px 999px 18px 18px;
+        border: 1.5px solid var(--gold);
+        opacity: 0.55;
+        z-index: 0;
+      }
+      .hero__photo {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 420px;
+        border-radius: 999px 999px 18px 18px;
+        box-shadow: var(--shadow-soft);
+        object-fit: cover;
+      }
+      .hero__tagline {
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--stone);
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 26px;
+      }
+      .hero__tagline::before { content: ''; width: 34px; height: 1px; background: var(--coral); }
+      .hero h1 {
+        font-size: clamp(40px, 5.4vw, 66px);
+        margin-bottom: 26px;
+      }
+      .hero h1 em { font-style: italic; color: var(--coral); }
+      .hero__sub { max-width: 460px; margin-bottom: 28px; }
+      .hero__quote {
+        border-left: 2px solid var(--gold);
+        padding-left: 22px;
+        margin-bottom: 38px;
+        max-width: 420px;
+      }
+      .hero__quote p:first-child {
+        font-family: var(--serif-text);
+        font-size: 18px;
+        font-style: italic;
+        color: var(--stone);
+        line-height: 1.55;
+        margin-bottom: 8px;
+      }
+      .hero__quote cite {
+        font-family: var(--sans);
+        font-style: normal;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--stone-light);
+      }
+      .hero__ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 36px; }
+      .hero__sign {
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        color: var(--stone-light);
+      }
+
+      /* ============================================================
+         Press bar
+         ============================================================ */
+      .press-bar {
+        background: var(--bg);
+        border-bottom: 1px solid rgba(45, 41, 38, 0.06);
+        padding: 26px clamp(24px, 5vw, 48px);
+      }
+      .press-bar__inner {
+        max-width: 980px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(24px, 4vw, 56px);
+        flex-wrap: wrap;
+      }
+      .press-bar__label {
+        font-family: var(--sans);
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--stone);
+      }
+      .press-bar__sun {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        text-decoration: none;
+        transition: opacity 0.25s ease;
+      }
+      .press-bar__sun:hover { opacity: 0.7; }
+      .press-bar__sun-logo {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        font-size: 22px;
+        color: #C8102E;
+        text-transform: uppercase;
+        letter-spacing: -0.5px;
+      }
+      .press-bar__sun-quote {
+        font-family: var(--sans);
+        font-size: 12px;
+        color: var(--stone);
+        padding-left: 14px;
+        border-left: 1px solid var(--stone-light);
+      }
+      .press-bar__ms {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--sans);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--stone);
+        opacity: 0.85;
+      }
+      .press-bar__ms i {
+        width: 4px; height: 4px;
+        border-radius: 50%;
+        background: var(--stone-light);
+      }
+
+      /* ============================================================
+         Problem section (dark)
+         ============================================================ */
+      .problem {
+        background:
+          radial-gradient(900px 500px at 50% -20%, rgba(201, 169, 98, 0.1), transparent 60%),
+          var(--ink);
+        padding: clamp(72px, 9vw, 120px) clamp(24px, 5vw, 48px);
+        text-align: center;
+      }
+      .problem .eyebrow { justify-content: center; }
+      .problem h2 {
+        font-size: clamp(30px, 3.8vw, 46px);
+        color: var(--cream);
+        margin-bottom: clamp(40px, 5vw, 64px);
+        line-height: 1.25;
+      }
+      .problem h2 em { font-style: italic; color: var(--gold); }
+      .problem__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(32px, 4vw, 56px);
+        text-align: left;
+        max-width: 1040px;
+        margin: 0 auto;
+      }
+      .problem__item { padding-top: 22px; border-top: 1px solid rgba(250, 247, 244, 0.16); position: relative; }
+      .problem__num {
+        position: absolute;
+        top: -13px; left: 0;
+        background: var(--ink);
+        padding-right: 14px;
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        color: var(--gold);
+      }
+      .problem__item h3 {
+        font-family: var(--serif-display);
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--cream);
+        margin-bottom: 12px;
+      }
+      .problem__item p {
+        font-size: 17px;
+        color: var(--stone-light);
+        line-height: 1.7;
+      }
+      .problem__promise {
+        font-family: var(--serif-text);
+        font-size: clamp(21px, 2.4vw, 26px);
+        font-style: italic;
+        color: var(--gold);
+        margin: clamp(44px, 5vw, 64px) auto 16px;
+        max-width: 640px;
+      }
+      .problem__note {
+        font-family: var(--sans);
+        font-size: 13px;
+        font-weight: 300;
+        color: var(--stone-light);
+        max-width: 500px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      /* ============================================================
+         About
+         ============================================================ */
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1.35fr;
+        gap: clamp(24px, 4vw, 64px);
+        align-items: center;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: clamp(64px, 8vw, 110px) clamp(24px, 5vw, 48px);
+      }
+      .about__figure { position: relative; display: flex; justify-content: center; }
+      .about__figure::after {
+        content: '';
+        position: absolute;
+        bottom: 8%; left: 4%;
+        width: 92px; height: 92px;
+        border-radius: 50%;
+        background: var(--coral);
+        opacity: 0.1;
+        pointer-events: none;
+      }
+      .about__figure::before {
+        content: '';
+        position: absolute;
+        top: 4%; right: 6%;
+        width: 130px; height: 130px;
+        border-radius: 50%;
+        border: 1.5px solid var(--gold);
+        opacity: 0.35;
+        pointer-events: none;
+      }
+      .about__photo {
+        width: 100%;
+        max-width: 380px;
+        filter: grayscale(100%) contrast(1.08);
+      }
+      .about h2 {
+        font-size: clamp(32px, 4vw, 46px);
+        margin-bottom: 28px;
+      }
+      .about__story p {
+        font-size: clamp(18px, 1.8vw, 19px);
+        font-style: italic;
+        color: var(--stone);
+        line-height: 1.75;
+        margin-bottom: 20px;
+        max-width: 560px;
+      }
+      .about__credentials {
+        display: flex;
+        gap: 32px 40px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+        padding-top: 28px;
+        border-top: 1px solid rgba(45, 41, 38, 0.1);
+      }
+      .about__credentials dt {
+        font-family: var(--sans);
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--stone);
+        margin-bottom: 6px;
+      }
+      .about__credentials dd {
+        font-family: var(--serif-text);
+        font-size: 16px;
+        color: var(--ink);
+        max-width: 230px;
+      }
+
+      /* ============================================================
+         Follow Along
+         ============================================================ */
+      .follow {
+        background: var(--bg);
+        border-top: 1px solid rgba(45, 41, 38, 0.05);
+        border-bottom: 1px solid rgba(45, 41, 38, 0.05);
+        padding: clamp(64px, 8vw, 100px) clamp(24px, 5vw, 48px);
+      }
+      .follow__header { text-align: center; max-width: 640px; margin: 0 auto clamp(40px, 5vw, 56px); }
+      .follow__header .eyebrow { justify-content: center; }
+      .follow__header h2 { font-size: clamp(32px, 4vw, 46px); margin-bottom: 16px; }
+      .follow__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(20px, 3vw, 36px);
+        max-width: 1100px;
+        margin: 0 auto;
+        align-items: start;
+      }
+      .follow-card {
+        border-radius: 24px;
+        padding: clamp(26px, 3vw, 38px);
+      }
+      .follow-card--light { background: var(--cream); border: 1px solid rgba(45, 41, 38, 0.05); }
+      .follow-card--dark { background: var(--ink); color: var(--cream); }
+      .follow-card__head { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
+      .follow-card__ms-logo {
+        font-family: var(--serif-display);
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--ink);
+      }
+      .follow-card__title { font-family: var(--sans); font-size: 12px; font-weight: 600; }
+      .follow-card__subtitle { font-family: var(--serif-text); font-size: 14px; color: var(--stone); }
+      .follow-card--dark .follow-card__subtitle { color: var(--stone-light); }
+      .follow-card__quote {
+        font-family: var(--serif-text);
+        font-size: 17px;
+        font-style: italic;
+        line-height: 1.65;
+        color: var(--stone);
+        margin-bottom: 26px;
+      }
+      .follow-card--dark .follow-card__quote { color: var(--stone-light); }
+      .ig-badge {
+        width: 48px; height: 48px;
+        border-radius: 14px;
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .watch-list { display: flex; flex-direction: column; gap: 12px; }
+      .watch-link {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-decoration: none;
+        padding: 14px 18px;
+        background: var(--bg);
+        border: 1px solid rgba(45, 41, 38, 0.05);
+        border-radius: 14px;
+        transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+      }
+      .watch-link:hover { transform: translateX(5px); box-shadow: 0 8px 24px rgba(45, 41, 38, 0.08); }
+      .watch-link__icon {
+        width: 36px; height: 36px;
+        border-radius: 50%;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .watch-link__label {
+        flex: 1;
+        font-family: var(--sans);
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .watch-link__cta { font-family: var(--serif-text); font-size: 15px; color: var(--stone); }
+      .tag-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+      .tag-row span {
+        font-family: var(--sans);
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--cream);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 8px 15px;
+        border-radius: 20px;
+      }
+      .follow-card .btn { width: 100%; }
+
+      /* ============================================================
+         Services
+         ============================================================ */
+      .services {
+        background: var(--cream);
+        padding: clamp(72px, 9vw, 120px) clamp(24px, 5vw, 48px);
+      }
+      .services__header { text-align: center; max-width: 640px; margin: 0 auto clamp(44px, 6vw, 64px); }
+      .services__header .eyebrow { justify-content: center; }
+      .services__header h2 { font-size: clamp(32px, 4vw, 46px); margin-bottom: 18px; }
+      .services__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(20px, 2.5vw, 30px);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .service-card {
+        background: var(--bg);
+        border: 1px solid rgba(45, 41, 38, 0.05);
+        border-radius: 20px;
+        padding: clamp(28px, 3vw, 38px) clamp(24px, 2.5vw, 30px);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+      }
+      .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--coral), var(--gold));
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lift); }
+      .service-card:hover::before { opacity: 1; }
+      .service-card__mark {
+        font-family: var(--serif-display);
+        font-size: 15px;
+        font-style: italic;
+        color: var(--gold);
+        margin-bottom: 22px;
+      }
+      .service-card h3 {
+        font-family: var(--serif-display);
+        font-size: 23px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+      .service-card > p {
+        font-size: 17px;
+        color: var(--stone);
+        line-height: 1.6;
+        flex: 1;
+        margin-bottom: 24px;
+      }
+      .service-card__meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-top: 18px;
+        border-top: 1px solid rgba(45, 41, 38, 0.08);
+      }
+      .service-card__duration {
+        font-family: var(--sans);
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--stone);
+      }
+      .service-card__price {
+        font-family: var(--serif-display);
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--coral);
+      }
+      .services__cta { text-align: center; margin-top: clamp(40px, 5vw, 56px); }
+
+      /* ============================================================
+         Testimonials
+         ============================================================ */
+      .testimonials {
+        padding: clamp(72px, 9vw, 120px) clamp(24px, 5vw, 48px);
+        text-align: center;
+        background:
+          radial-gradient(700px 400px at 50% 0%, rgba(201, 169, 98, 0.07), transparent 65%),
+          var(--bg);
+      }
+      .testimonials .eyebrow { justify-content: center; }
+      .testimonials h2 { font-size: clamp(32px, 4vw, 46px); margin-bottom: clamp(36px, 5vw, 52px); }
+      .testimonials__stage { max-width: 760px; margin: 0 auto; position: relative; }
+      .testimonials__mark {
+        font-family: Georgia, serif;
+        font-size: 64px;
+        line-height: 1;
+        color: var(--gold);
+        margin-bottom: 12px;
+      }
+      .testimonial { display: none; }
+      .testimonial.is-active { display: block; animation: testimonialIn 0.7s var(--ease-out); }
+      @keyframes testimonialIn {
+        from { opacity: 0; transform: translateY(14px); }
+        to { opacity: 1; transform: none; }
+      }
+      .testimonial blockquote p {
+        font-family: var(--serif-display);
+        font-size: clamp(20px, 2.4vw, 25px);
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.55;
+        color: var(--ink);
+        margin-bottom: 26px;
+      }
+      .testimonial figcaption .t-name {
+        font-family: var(--sans);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+      }
+      .testimonial figcaption .t-title {
+        font-family: var(--serif-text);
+        font-size: 16px;
+        color: var(--stone-light);
+        margin-top: 4px;
+      }
+      .testimonials__dots { display: flex; justify-content: center; gap: 12px; margin-top: 40px; }
+      .testimonials__dots button {
+        width: 10px; height: 10px;
+        border-radius: 50%;
+        border: none;
+        padding: 0;
+        background: var(--stone-light);
+        transition: transform 0.3s var(--ease-out), background-color 0.3s ease;
+      }
+      .testimonials__dots button.is-active { background: var(--coral); transform: scale(1.35); }
+
+      /* ============================================================
+         Bridal
+         ============================================================ */
+      .bridal {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        background: var(--ink);
+      }
+      .bridal__content {
+        padding: clamp(56px, 7vw, 96px) clamp(24px, 5vw, 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .bridal .eyebrow { color: var(--gold); }
+      .bridal h2 {
+        font-size: clamp(30px, 3.6vw, 42px);
+        color: var(--cream);
+        margin-bottom: 24px;
+        line-height: 1.2;
+      }
+      .bridal__lede {
+        font-size: 19px;
+        color: var(--stone-light);
+        line-height: 1.75;
+        margin-bottom: 30px;
+        max-width: 470px;
+      }
+      .bridal__reviews {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 24px 26px;
+        margin-bottom: 36px;
+        max-width: 470px;
+      }
+      .bridal__stars {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 16px;
+      }
+      .bridal__stars span {
+        font-family: var(--sans);
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        color: var(--stone-light);
+        margin-left: 10px;
+      }
+      .bridal__review { padding-top: 14px; margin-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+      .bridal__review:first-of-type { padding-top: 0; margin-top: 0; border-top: none; }
+      .bridal__review p {
+        font-family: var(--serif-text);
+        font-size: 15px;
+        font-style: italic;
+        color: var(--stone-light);
+        line-height: 1.55;
+        margin-bottom: 6px;
+      }
+      .bridal__review cite {
+        font-family: var(--sans);
+        font-style: normal;
+        font-size: 10px;
+        color: var(--stone);
+      }
+      .bridal .btn { align-self: flex-start; }
+      .bridal__figure {
+        background:
+          radial-gradient(600px 400px at 70% 30%, rgba(201, 169, 98, 0.18), transparent 60%),
+          var(--cream);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(32px, 4vw, 48px);
+        min-height: 420px;
+      }
+      .bridal__photo {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 999px 999px 16px 16px;
+        box-shadow: var(--shadow-soft);
+        object-fit: cover;
+      }
+
+      /* ============================================================
+         FAQ
+         ============================================================ */
+      .faq {
+        background: var(--cream);
+        padding: clamp(72px, 9vw, 120px) clamp(24px, 5vw, 48px);
+      }
+      .faq__inner { max-width: 800px; margin: 0 auto; }
+      .faq__header { text-align: center; margin-bottom: clamp(36px, 5vw, 52px); }
+      .faq__header .eyebrow { justify-content: center; }
+      .faq__header h2 { font-size: clamp(32px, 4vw, 44px); }
+      .faq__item { border-bottom: 1px solid rgba(45, 41, 38, 0.1); padding: 30px 0; }
+      .faq__item h3 {
+        font-family: var(--serif-display);
+        font-size: 21px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+      .faq__item p {
+        font-size: 17px;
+        color: var(--stone);
+        line-height: 1.7;
+      }
+
+      /* ============================================================
+         Final CTA
+         ============================================================ */
+      .final-cta {
+        background:
+          radial-gradient(800px 460px at 50% -30%, rgba(255, 255, 255, 0.16), transparent 60%),
+          var(--coral);
+        padding: clamp(72px, 9vw, 116px) clamp(24px, 5vw, 48px);
+        text-align: center;
+      }
+      .final-cta h2 {
+        font-size: clamp(32px, 4vw, 46px);
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      .final-cta p {
+        font-family: var(--serif-text);
+        font-size: clamp(19px, 2vw, 22px);
+        color: rgba(255, 255, 255, 0.92);
+        max-width: 520px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
+      }
+      .final-cta .btn { padding: 20px 52px; font-size: 12px; }
+
+      /* ============================================================
+         Instagram strip
+         ============================================================ */
+      .instagram {
+        background: var(--bg);
+        padding: clamp(64px, 8vw, 96px) clamp(24px, 5vw, 48px);
+        text-align: center;
+      }
+      .instagram .eyebrow { justify-content: center; }
+      .instagram h2 { font-size: clamp(26px, 3.4vw, 38px); margin-bottom: 12px; }
+      .instagram__sub {
+        font-family: var(--serif-text);
+        font-size: 18px;
+        color: var(--stone);
+        max-width: 500px;
+        margin: 0 auto 36px;
+      }
+      .instagram__grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+        max-width: 920px;
+        margin: 0 auto 36px;
+      }
+      .instagram__tile {
+        aspect-ratio: 1;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        overflow: hidden;
+        transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+      }
+      .instagram__tile:hover { transform: scale(1.05); box-shadow: 0 12px 28px rgba(45, 41, 38, 0.16); }
+      .instagram__tile span {
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        color: #fff;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      .btn--ink { background: var(--ink); color: #fff; }
+      .btn--ink:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(45, 41, 38, 0.3); }
+
+      /* ============================================================
+         Footer
+         ============================================================ */
+      .site-footer {
+        background: var(--ink);
+        color: var(--cream);
+        padding: clamp(56px, 7vw, 88px) clamp(24px, 5vw, 48px) 36px;
+      }
+      .site-footer__grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: clamp(36px, 5vw, 60px);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .site-footer__brand { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+      .site-footer__brand img {
+        width: 60px; height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .site-footer__brand span {
+        font-family: var(--serif-display);
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .site-footer__tagline {
+        font-family: var(--serif-text);
+        font-size: 16px;
+        color: var(--stone-light);
+        line-height: 1.65;
+        margin-bottom: 22px;
+        max-width: 280px;
+      }
+      .site-footer__social { display: flex; gap: 12px; }
+      .site-footer__social a {
+        width: 38px; height: 38px;
+        border-radius: 50%;
+        border: 1px solid var(--stone);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s var(--ease-out);
+      }
+      .site-footer__social a:hover { background: var(--coral); border-color: var(--coral); transform: translateY(-2px); }
+      .site-footer h4 {
+        font-family: var(--sans);
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+        color: var(--cream);
+      }
+      .site-footer ul { list-style: none; }
+      .site-footer ul li { margin-bottom: 11px; }
+      .site-footer ul a, .site-footer address a {
+        font-family: var(--serif-text);
+        font-size: 16px;
+        color: var(--stone-light);
+        text-decoration: none;
+        transition: color 0.25s ease;
+      }
+      .site-footer ul a:hover, .site-footer address a:hover { color: var(--cream); }
+      .site-footer address {
+        font-style: normal;
+        font-family: var(--serif-text);
+        font-size: 16px;
+        color: var(--stone-light);
+        line-height: 2;
+      }
+      .site-footer__bottom {
+        max-width: 1200px;
+        margin: clamp(44px, 5vw, 64px) auto 0;
+        padding-top: 28px;
+        border-top: 1px solid rgba(250, 247, 244, 0.12);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .site-footer__bottom p, .site-footer__bottom a {
+        font-family: var(--sans);
+        font-size: 11px;
+        color: var(--stone);
+        text-decoration: none;
+      }
+      .site-footer__legal { display: flex; gap: 24px; }
+
+      /* ============================================================
+         Booking modal
+         ============================================================ */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(45, 41, 38, 0.6);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        z-index: 2000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+      .modal-overlay.is-open { opacity: 1; pointer-events: auto; }
+      .modal {
+        background: #fff;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 620px;
+        max-height: 90vh;
+        overflow: hidden;
+        transform: translateY(24px) scale(0.96);
+        transition: transform 0.35s var(--ease-out);
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.32);
+        display: flex;
+        flex-direction: column;
+      }
+      .modal-overlay.is-open .modal { transform: none; }
+      .modal__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 26px;
+        border-bottom: 1px solid rgba(45, 41, 38, 0.08);
+      }
+      .modal__header h3 {
+        font-family: var(--serif-display);
+        font-size: 21px;
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+      .modal__header p { font-family: var(--serif-text); font-size: 15px; color: var(--stone); }
+      .modal__close {
+        width: 38px; height: 38px;
+        border: none;
+        background: var(--cream);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+      }
+      .modal__close:hover { background: #efe9e3; transform: scale(1.06); }
+      .modal__body { min-height: 500px; }
+      .modal__body iframe { width: 100%; height: 500px; border: none; display: block; }
+      .modal__footer {
+        padding: 16px 26px;
+        border-top: 1px solid rgba(45, 41, 38, 0.08);
+        background: var(--cream);
+        text-align: center;
+      }
+      .modal__footer p { font-family: var(--sans); font-size: 11px; color: var(--stone); }
+      .modal__footer a { color: var(--coral); }
+      body.modal-open { overflow: hidden; }
+
+      /* ============================================================
+         Responsive
+         ============================================================ */
+      @media (max-width: 960px) {
+        .nav-links { display: none; }
+        .nav-toggle { display: flex; }
+        .hero__grid { grid-template-columns: 1fr; text-align: center; padding-top: 36px; }
+        .hero__figure { order: -1; }
+        .hero__figure::before { inset: 18px -10px -10px 18px; }
+        .hero__photo { max-width: 320px; }
+        .hero__tagline { justify-content: center; }
+        .hero__sub, .hero__quote { margin-left: auto; margin-right: auto; }
+        .hero__quote { text-align: left; }
+        .hero__ctas { justify-content: center; }
+        .problem__grid { grid-template-columns: 1fr; gap: 40px; }
+        .about { grid-template-columns: 1fr; text-align: center; }
+        .about__photo { max-width: 280px; }
+        .about__story p { margin-left: auto; margin-right: auto; }
+        .about__credentials { justify-content: center; }
+        .follow__grid { grid-template-columns: 1fr; }
+        .services__grid { grid-template-columns: 1fr 1fr; }
+        .bridal { grid-template-columns: 1fr; }
+        .bridal__figure { order: -1; min-height: 360px; }
+        .site-footer__grid { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 620px) {
+        .services__grid { grid-template-columns: 1fr; }
+        .site-footer__grid { grid-template-columns: 1fr; }
+        .hero h1 { font-size: clamp(34px, 9vw, 40px); }
+        .hero__ctas { flex-direction: column; width: 100%; }
+        .hero__ctas .btn { width: 100%; }
+        .brand__logo { width: 48px; height: 48px; }
+        .brand__name { font-size: 17px; }
+        .brand__byline { font-size: 8px; }
+        .instagram__grid { grid-template-columns: repeat(3, 1fr); }
+        .press-bar__inner { gap: 18px; }
+        .site-footer__bottom { justify-content: center; text-align: center; }
+      }
+    </style>
   </head>
+
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- ============ Navigation ============ -->
+    <header class="site-nav" id="siteNav">
+      <div class="site-nav__inner">
+        <a class="brand" href="#top" aria-label="Style Confident — home">
+          <img class="brand__logo" src="/images/style-confident-logo.jpg" alt="Style Confident Logo" />
+          <span>
+            <span class="brand__name">Style Confident</span>
+            <span class="brand__byline">by Kelly Harvey-Welsh</span>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#bridal">Bridal</a>
+          <a href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="#" data-book>Contact</a>
+          <a href="#" class="btn btn--coral" data-book>Book Now</a>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#bridal">Bridal</a>
+        <a href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#" data-book>Contact</a>
+        <a href="#" class="btn btn--coral" data-book>Book Now</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- ============ Hero ============ -->
+      <section class="hero">
+        <div class="hero__decor-ring" aria-hidden="true"></div>
+        <div class="hero__decor-dot" aria-hidden="true"></div>
+
+        <div class="hero__grid">
+          <figure class="hero__figure reveal">
+            <img class="hero__photo" src="/images/KellyWelshpicked2024_19.jpg" alt="Kelly Harvey-Welsh - Personal Stylist" fetchpriority="high" />
+          </figure>
+
+          <div class="hero__content">
+            <p class="hero__tagline reveal">Real Style for Real Life</p>
+            <h1 class="display reveal" style="--reveal-delay: 0.08s">Finally Feel Like<br /><em>Yourself Again</em></h1>
+            <p class="lede hero__sub reveal" style="--reveal-delay: 0.16s">
+              For women ready to rediscover their style —
+              I'll help you build a look that fits your life now.
+            </p>
+            <blockquote class="hero__quote reveal" style="--reveal-delay: 0.24s">
+              <p>"Worth every penny. Kelly changed how I see myself."</p>
+              <cite>— Emma, London</cite>
+            </blockquote>
+            <div class="hero__ctas reveal" style="--reveal-delay: 0.32s">
+              <a href="#" class="btn btn--coral" data-book>Book a Free Consultation</a>
+              <a href="#services" class="btn btn--ghost">View Services</a>
+            </div>
+            <p class="hero__sign reveal" style="--reveal-delay: 0.4s">Kelly Harvey-Welsh · Independent Personal Stylist</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ As Seen In ============ -->
+      <section class="press-bar" aria-label="As seen in">
+        <div class="press-bar__inner">
+          <span class="press-bar__label">As Seen In</span>
+          <a class="press-bar__sun" href="https://www.thesun.co.uk/fabulous/37928155/marks-and-spencer-jean-guide-ditching-skinnies/" target="_blank" rel="noopener noreferrer">
+            <span class="press-bar__sun-logo">The Sun</span>
+            <span class="press-bar__sun-quote">"The ultimate jeans guide"</span>
+          </a>
+          <span class="press-bar__ms">Stylist for M&amp;S <i aria-hidden="true"></i> Battersea Power Station</span>
+        </div>
+      </section>
+
+      <!-- ============ Sound Familiar ============ -->
+      <section class="problem">
+        <p class="eyebrow eyebrow--centered reveal">Sound Familiar?</p>
+        <h2 class="display reveal" style="--reveal-delay: 0.08s">
+          "I have a wardrobe full of clothes...<br />
+          <em>and nothing to wear"</em>
+        </h2>
+        <div class="problem__grid">
+          <div class="problem__item reveal">
+            <span class="problem__num" aria-hidden="true">01</span>
+            <h3>Your Life Has Evolved</h3>
+            <p>New job, new chapter, new priorities — but your wardrobe hasn't caught up. Your old clothes just don't feel like 'you' anymore.</p>
+          </div>
+          <div class="problem__item reveal" style="--reveal-delay: 0.12s">
+            <span class="problem__num" aria-hidden="true">02</span>
+            <h3>You've Lost Your Style Identity</h3>
+            <p>You used to know what you liked. Now you default to the same safe outfits and wonder where 'you' went.</p>
+          </div>
+          <div class="problem__item reveal" style="--reveal-delay: 0.24s">
+            <span class="problem__num" aria-hidden="true">03</span>
+            <h3>Shopping Leaves You Empty-Handed</h3>
+            <p>You walk into shops full of hope and leave with nothing. Or worse — another mistake hanging in your wardrobe with the tags still on.</p>
+          </div>
+        </div>
+        <p class="problem__promise reveal">You deserve to feel confident every day. Let me show you how.</p>
+        <p class="problem__note reveal" style="--reveal-delay: 0.1s">
+          No judgement. No pressure to buy designer. Just honest guidance that works
+          for your style, your budget, and your real life.
+        </p>
+      </section>
+
+      <!-- ============ About ============ -->
+      <section id="about" class="about">
+        <figure class="about__figure reveal">
+          <img class="about__photo" src="/images/KellyWelshpicked2024-removebg-preview.png" alt="Kelly Harvey-Welsh - Meet Your Stylist" loading="lazy" />
+        </figure>
+        <div class="about__story">
+          <p class="eyebrow reveal">Meet Your Stylist</p>
+          <h2 class="display reveal" style="--reveal-delay: 0.08s">"Hi, I'm Kelly"</h2>
+          <p class="reveal" style="--reveal-delay: 0.16s">
+            "I've been where you are. There came a point where I'd stand in front of
+            my wardrobe feeling completely lost. Nothing felt right. Nothing felt like
+            'me'. Life had changed, and somewhere along the way, I'd forgotten who I was
+            when I looked in the mirror.
+          </p>
+          <p class="reveal" style="--reveal-delay: 0.24s">
+            Finding my style again changed everything — not just how I dressed,
+            but how I felt about myself. Now I help other women skip the years
+            of frustration and find that confidence faster. No fashion rules,
+            no judgement — just real solutions that work for your life."
+          </p>
+          <dl class="about__credentials reveal" style="--reveal-delay: 0.32s">
+            <div>
+              <dt>Also At</dt>
+              <dd>M&amp;S Battersea (Stylist)</dd>
+            </div>
+            <div>
+              <dt>Fashion Training</dt>
+              <dd>London College of Style</dd>
+            </div>
+            <div>
+              <dt>Client TV Styling</dt>
+              <dd>This Morning, My Mum Your Dad</dd>
+            </div>
+            <div>
+              <dt>Previously</dt>
+              <dd>Owner, The Secret Dress House, Reigate (2013-2018)</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============ Follow Along ============ -->
+      <section id="follow" class="follow">
+        <div class="follow__header">
+          <p class="eyebrow eyebrow--centered reveal">Follow Along</p>
+          <h2 class="display reveal" style="--reveal-delay: 0.08s">Let's Connect</h2>
+          <p class="lede reveal" style="--reveal-delay: 0.16s">
+            For daily style tips, outfit inspiration, and behind-the-scenes of my styling sessions
+          </p>
+        </div>
+
+        <div class="follow__grid">
+          <!-- M&S TikTok -->
+          <article class="follow-card follow-card--light reveal">
+            <div class="follow-card__head">
+              <span class="follow-card__ms-logo">M&amp;S</span>
+              <div>
+                <p class="follow-card__title">Personal Stylist</p>
+                <p class="follow-card__subtitle">Battersea Power Station</p>
+              </div>
+            </div>
+            <p class="follow-card__quote">
+              "Style Confident is my independent styling practice. I'm also the stylist for M&amp;S Battersea — catch me on their TikTok!"
+            </p>
+            <div class="watch-list">
+              <a class="watch-link" href="https://www.tiktok.com/@mandsbatterseafashion/video/7572627145680293142" target="_blank" rel="noopener noreferrer">
+                <span class="watch-link__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                </span>
+                <span class="watch-link__label">Style Session</span>
+                <span class="watch-link__cta">Watch →</span>
+              </a>
+              <a class="watch-link" href="https://www.tiktok.com/@mandsbatterseafashion/video/7537032278430567702" target="_blank" rel="noopener noreferrer">
+                <span class="watch-link__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                </span>
+                <span class="watch-link__label">Outfit Ideas</span>
+                <span class="watch-link__cta">Watch →</span>
+              </a>
+              <a class="watch-link" href="https://www.tiktok.com/@mandsbatterseafashion/video/7527361142008679702" target="_blank" rel="noopener noreferrer">
+                <span class="watch-link__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                </span>
+                <span class="watch-link__label">Fashion Tips</span>
+                <span class="watch-link__cta">Watch →</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Instagram -->
+          <article class="follow-card follow-card--dark reveal" style="--reveal-delay: 0.12s">
+            <div class="follow-card__head">
+              <span class="ig-badge" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </span>
+              <div>
+                <p class="follow-card__title">Instagram</p>
+                <p class="follow-card__subtitle">@iamkellyhw.thestylist</p>
+              </div>
+            </div>
+            <p class="follow-card__quote">
+              "Join me for real-life outfit ideas, styling tips, and the occasional
+              behind-the-scenes peek at my work with clients and at M&amp;S!"
+            </p>
+            <div class="tag-row">
+              <span>Outfit Ideas</span>
+              <span>Style Tips</span>
+              <span>Client Transformations</span>
+              <span>Behind the Scenes</span>
+            </div>
+            <a class="btn btn--coral" href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer">
+              Follow on Instagram
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ Services ============ -->
+      <section id="services" class="services">
+        <div class="services__header">
+          <p class="eyebrow eyebrow--centered reveal">How I Can Help</p>
+          <h2 class="display reveal" style="--reveal-delay: 0.08s">Simple Solutions That Work</h2>
+          <p class="lede reveal" style="--reveal-delay: 0.16s">
+            Whether you need a wardrobe clear-out, help finding clothes that
+            actually suit you, or a wedding dress ally — I've got you.
+          </p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <p class="service-card__mark" aria-hidden="true">No. 1</p>
+            <h3>Wardrobe Rescue</h3>
+            <p>We'll sort through everything you own, clear the clutter, and create outfits from pieces you'd forgotten you had</p>
+            <div class="service-card__meta">
+              <span class="service-card__duration">3 hours</span>
+              <span class="service-card__price">£250</span>
+            </div>
+          </article>
+          <article class="service-card reveal" style="--reveal-delay: 0.08s">
+            <p class="service-card__mark" aria-hidden="true">No. 2</p>
+            <h3>Personal Shopping</h3>
+            <p>I'll take you to shops that actually suit your style and budget — no more wandering aimlessly or buying mistakes</p>
+            <div class="service-card__meta">
+              <span class="service-card__duration">3 hours</span>
+              <span class="service-card__price">£250</span>
+            </div>
+          </article>
+          <article class="service-card reveal" style="--reveal-delay: 0.16s">
+            <p class="service-card__mark" aria-hidden="true">No. 3</p>
+            <h3>Colour Analysis</h3>
+            <p>Find out which colours make you look alive (and which ones drain you). Game-changer for shopping</p>
+            <div class="service-card__meta">
+              <span class="service-card__duration">2 hours</span>
+              <span class="service-card__price">£170</span>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <p class="service-card__mark" aria-hidden="true">No. 4</p>
+            <h3>Online Style Session</h3>
+            <p>Can't meet in person? We'll do it over video — same results, from your own wardrobe</p>
+            <div class="service-card__meta">
+              <span class="service-card__duration">2 hours</span>
+              <span class="service-card__price">£150</span>
+            </div>
+          </article>
+          <article class="service-card reveal" style="--reveal-delay: 0.08s">
+            <p class="service-card__mark" aria-hidden="true">No. 5</p>
+            <h3>Event &amp; Client TV Styling</h3>
+            <p>Big event coming up? TV appearance? I've styled clients for This Morning, My Mum Your Dad, and more. Let's make sure you look incredible</p>
+            <div class="service-card__meta">
+              <span class="service-card__duration">Bespoke</span>
+              <span class="service-card__price" style="font-size: 16px;">Get in Touch</span>
+            </div>
+          </article>
+          <article class="service-card reveal" style="--reveal-delay: 0.16s">
+            <p class="service-card__mark" aria-hidden="true">No. 6</p>
+            <h3>Bridal Styling</h3>
+            <p>Former bridal boutique owner turned your secret weapon. From first appointment to 'the one' — I know exactly how to find your dream dress</p>
+            <div class="service-card__meta">
+              <span class="service-card__duration">Bespoke</span>
+              <span class="service-card__price" style="font-size: 16px;">Get in Touch</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="services__cta reveal">
+          <a href="#" class="btn btn--coral" data-book>Book a Consultation</a>
+        </div>
+      </section>
+
+      <!-- ============ Testimonials ============ -->
+      <section class="testimonials">
+        <p class="eyebrow eyebrow--centered reveal">What Clients Say</p>
+        <h2 class="display reveal" style="--reveal-delay: 0.08s">Kind Words</h2>
+
+        <div class="testimonials__stage reveal" style="--reveal-delay: 0.16s">
+          <div class="testimonials__mark" aria-hidden="true">"</div>
+
+          <figure class="testimonial is-active">
+            <blockquote>
+              <p>Kelly completely transformed how I see my wardrobe. I finally feel like myself again after years of hiding in boring clothes.</p>
+            </blockquote>
+            <figcaption>
+              <p class="t-name">Sarah M.</p>
+              <p class="t-title">Wardrobe Rescue Client, Surrey</p>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <blockquote>
+              <p>The colour analysis was life-changing! I've received more compliments in the last month than in the last year. I finally understand what works for me.</p>
+            </blockquote>
+            <figcaption>
+              <p class="t-name">Emma T.</p>
+              <p class="t-title">Colour Analysis Client, London</p>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <blockquote>
+              <p>I was so nervous about personal shopping but Kelly made it fun and relaxed. She knew exactly which shops to take me to and I didn't waste money on mistakes.</p>
+            </blockquote>
+            <figcaption>
+              <p class="t-name">Rachel H.</p>
+              <p class="t-title">Personal Shopping Client, Battersea</p>
+            </figcaption>
+          </figure>
+
+          <div class="testimonials__dots" role="tablist" aria-label="Testimonials">
+            <button type="button" class="is-active" aria-label="Testimonial 1"></button>
+            <button type="button" aria-label="Testimonial 2"></button>
+            <button type="button" aria-label="Testimonial 3"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Bridal ============ -->
+      <section id="bridal" class="bridal">
+        <div class="bridal__content">
+          <p class="eyebrow reveal">Bridal Services</p>
+          <h2 class="display reveal" style="--reveal-delay: 0.08s">Find Your Dream<br />Wedding Dress</h2>
+          <p class="bridal__lede reveal" style="--reveal-delay: 0.16s">
+            Wedding dress shopping should be magical, not stressful. As the former owner
+            of The Secret Dress House in Reigate, Surrey (2013-2018), I've helped hundreds
+            of brides find their perfect dress. Let me be your expert guide.
+          </p>
+
+          <div class="bridal__reviews reveal" style="--reveal-delay: 0.24s">
+            <div class="bridal__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A962" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A962" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A962" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A962" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A962" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>30+ Five Star Google Reviews</span>
+            </div>
+            <div class="bridal__review">
+              <p>"Kelly and the team were so helpful and friendly and really made me feel welcome and comfortable. They were amazing at recommending dresses to try that suited my shape."</p>
+              <cite>— Rachel Tinawi, Google Review</cite>
+            </div>
+            <div class="bridal__review">
+              <p>"Kelly and her team were absolutely brilliant and I cannot thank them enough for helping me find my perfect dress. I had so many compliments on the day!"</p>
+              <cite>— Emily Miles, Google Review</cite>
+            </div>
+            <div class="bridal__review">
+              <p>"The Secret Dress House literally SAVED my wedding day. After being told there was nothing that could be done by another shop, Kelly went above and beyond."</p>
+              <cite>— Holly Barakat, Google Review</cite>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn--coral reveal" style="--reveal-delay: 0.3s" data-book>Enquire About Bridal</a>
+        </div>
+
+        <figure class="bridal__figure">
+          <img class="bridal__photo reveal" src="/images/CallyBorgSalonstyles2025_37_(2).jpeg" alt="Kelly Harvey-Welsh - Bridal Styling Consultation" loading="lazy" />
+        </figure>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section id="faq" class="faq">
+        <div class="faq__inner">
+          <div class="faq__header">
+            <p class="eyebrow eyebrow--centered reveal">Questions?</p>
+            <h2 class="display reveal" style="--reveal-delay: 0.08s">Frequently Asked</h2>
+          </div>
+
+          <div class="faq__item reveal">
+            <h3>Can a 'normal' person really use a personal stylist?</h3>
+            <p>Absolutely! My services are designed for real women with real lives and budgets—not celebrities. If you've ever felt stuck with your style, I'm here for you.</p>
+          </div>
+          <div class="faq__item reveal">
+            <h3>What budget do I need for shopping appointments?</h3>
+            <p>That's entirely up to you. We discuss budget before any shopping trip, and I work across all price points—from the high street to designer.</p>
+          </div>
+          <div class="faq__item reveal">
+            <h3>Do you offer virtual consultations?</h3>
+            <p>Yes! My Online Style Edit is perfect if you're not in London or Surrey. We work via video call and I send personalised shopping links directly to you.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Final CTA ============ -->
+      <section class="final-cta">
+        <h2 class="display reveal">Ready to Love Getting Dressed Again?</h2>
+        <p class="reveal" style="--reveal-delay: 0.1s">
+          Book a free 15-minute call. No pressure, no hard sell — just an honest
+          chat about where you're stuck and how I can help.
+        </p>
+        <a href="#" class="btn btn--white reveal" style="--reveal-delay: 0.2s" data-book>Let's Chat</a>
+      </section>
+
+      <!-- ============ Instagram ============ -->
+      <section class="instagram">
+        <p class="eyebrow eyebrow--centered reveal">Follow Along</p>
+        <h2 class="display reveal" style="--reveal-delay: 0.08s">@iamkellyhw.thestylist</h2>
+        <p class="instagram__sub reveal" style="--reveal-delay: 0.16s">Daily style tips, behind-the-scenes, and real client transformations</p>
+
+        <div class="instagram__grid reveal" style="--reveal-delay: 0.2s">
+          <a class="instagram__tile" style="background: linear-gradient(135deg, #E8614D 0%, #C9A962 100%);" href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer"><span>Style Tips</span></a>
+          <a class="instagram__tile" style="background: linear-gradient(135deg, #FAF7F4 0%, #E8DFD0 100%);" href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer"><span>Neutrals</span></a>
+          <a class="instagram__tile" style="background: linear-gradient(135deg, #2D2926 0%, #4A4139 100%);" href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer"><span>Outfits</span></a>
+          <a class="instagram__tile" style="background: linear-gradient(135deg, #C9A962 0%, #E8614D 100%);" href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer"><span>Colour</span></a>
+          <a class="instagram__tile" style="background: linear-gradient(135deg, #7D756E 0%, #B8B2AA 100%);" href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer"><span>BTS</span></a>
+          <a class="instagram__tile" style="background: linear-gradient(135deg, #E8614D 0%, #FAF7F4 100%);" href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer"><span>Tips</span></a>
+        </div>
+
+        <a class="btn btn--ink" href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Follow on Instagram
+        </a>
+      </section>
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+      <div class="site-footer__grid">
+        <div>
+          <div class="site-footer__brand">
+            <img src="/images/style-confident-logo.jpg" alt="Style Confident Logo" loading="lazy" />
+            <span>Style Confident</span>
+          </div>
+          <p class="site-footer__tagline">
+            Helping women rediscover their style confidence, one wardrobe at a time.
+          </p>
+          <div class="site-footer__social">
+            <a href="https://www.instagram.com/iamkellyhw.thestylist/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#B8B2AA"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@mandsbatterseafashion" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#B8B2AA"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Wardrobe Rescue</a></li>
+            <li><a href="#services">Personal Shopping</a></li>
+            <li><a href="#services">Colour Analysis</a></li>
+            <li><a href="#services">Online Styling</a></li>
+            <li><a href="#bridal">Bridal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#follow">Follow Along</a></li>
+            <li><a href="#" data-book>Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Get in Touch</h4>
+          <address>
+            <a href="mailto:kelly@styleconfident.co.uk">kelly@styleconfident.co.uk</a><br />
+            London · Surrey · Online
+          </address>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2026 Style Confident. All rights reserved.</p>
+        <div class="site-footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ Booking Modal ============ -->
+    <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle" aria-hidden="true">
+      <div class="modal">
+        <div class="modal__header">
+          <div>
+            <h3 id="bookingModalTitle">Book Your Consultation</h3>
+            <p>Choose a time that works for you</p>
+          </div>
+          <button type="button" class="modal__close" id="bookingModalClose" aria-label="Close booking modal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="modal__body">
+          <!-- Cal.com embed loads on first open to keep the page fast -->
+          <iframe id="bookingFrame" title="Book a consultation with Kelly" data-src="https://app.cal.eu/styleconfident/15min?embed=true&theme=light"></iframe>
+        </div>
+        <div class="modal__footer">
+          <p>Prefer email? Contact me at <a href="mailto:kelly@styleconfident.co.uk">kelly@styleconfident.co.uk</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        'use strict';
+
+        /* Nav shadow on scroll */
+        var nav = document.getElementById('siteNav');
+        var onScroll = function () {
+          nav.classList.toggle('is-scrolled', window.scrollY > 8);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        /* Mobile menu */
+        var navToggle = document.getElementById('navToggle');
+        var mobileMenu = document.getElementById('mobileMenu');
+        navToggle.addEventListener('click', function () {
+          var open = mobileMenu.classList.toggle('is-open');
+          navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        });
+        mobileMenu.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A') {
+            mobileMenu.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        /* Booking modal */
+        var modal = document.getElementById('bookingModal');
+        var frame = document.getElementById('bookingFrame');
+        var closeBtn = document.getElementById('bookingModalClose');
+        var openModal = function (e) {
+          e.preventDefault();
+          if (!frame.src) frame.src = frame.getAttribute('data-src');
+          modal.classList.add('is-open');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.classList.add('modal-open');
+          closeBtn.focus();
+        };
+        var closeModal = function () {
+          modal.classList.remove('is-open');
+          modal.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('modal-open');
+        };
+        document.querySelectorAll('[data-book]').forEach(function (el) {
+          el.addEventListener('click', openModal);
+        });
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+        });
+
+        /* Testimonial carousel */
+        var slides = document.querySelectorAll('.testimonial');
+        var dots = document.querySelectorAll('.testimonials__dots button');
+        var active = 0;
+        var show = function (i) {
+          slides[active].classList.remove('is-active');
+          dots[active].classList.remove('is-active');
+          active = i;
+          slides[active].classList.add('is-active');
+          dots[active].classList.add('is-active');
+        };
+        var timer = setInterval(function () {
+          show((active + 1) % slides.length);
+        }, 5000);
+        dots.forEach(function (dot, i) {
+          dot.addEventListener('click', function () {
+            clearInterval(timer);
+            show(i);
+          });
+        });
+
+        /* Scroll reveal */
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+          document.querySelectorAll('.reveal').forEach(function (el) {
+            observer.observe(el);
+          });
+        } else {
+          document.querySelectorAll('.reveal').forEach(function (el) {
+            el.classList.add('is-visible');
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
