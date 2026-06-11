@@ -51,7 +51,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
 
     <!-- Performance -->
-    <link rel="preload" as="image" href="/images/KellyWelshpicked2024_19.jpg" />
+    <link rel="preload" as="image" type="image/webp"
+          imagesrcset="/images/opt/kelly-hero-480.webp 480w, /images/opt/kelly-hero-840.webp 840w, /images/opt/kelly-hero-1200.webp 1200w"
+          imagesizes="(max-width: 960px) 320px, 420px" />
 
     <!-- Structured Data - LocalBusiness -->
     <script type="application/ld+json">
@@ -623,6 +625,7 @@
         position: relative;
         z-index: 1;
         width: 100%;
+        height: auto;
         max-width: 420px;
         border-radius: 999px 999px 18px 18px;
         box-shadow: var(--shadow-soft);
@@ -846,6 +849,7 @@
       }
       .about__photo {
         width: 100%;
+        height: auto;
         max-width: 380px;
         filter: grayscale(100%) contrast(1.08);
       }
@@ -1205,6 +1209,7 @@
       }
       .bridal__photo {
         width: 100%;
+        height: auto;
         max-width: 400px;
         border-radius: 999px 999px 16px 16px;
         box-shadow: var(--shadow-soft);
@@ -1512,7 +1517,10 @@
     <header class="site-nav" id="siteNav">
       <div class="site-nav__inner">
         <a class="brand" href="#top" aria-label="Style Confident — home">
-          <img class="brand__logo" src="/images/style-confident-logo.jpg" alt="Style Confident Logo" />
+          <picture>
+            <source type="image/webp" srcset="/images/opt/logo-120.webp" />
+            <img class="brand__logo" src="/images/style-confident-logo.jpg" alt="Style Confident Logo" width="120" height="121" />
+          </picture>
           <span>
             <span class="brand__name">Style Confident</span>
             <span class="brand__byline">by Kelly Harvey-Welsh</span>
@@ -1551,7 +1559,12 @@
 
         <div class="hero__grid">
           <figure class="hero__figure reveal">
-            <img class="hero__photo" src="/images/KellyWelshpicked2024_19.jpg" alt="Kelly Harvey-Welsh - Personal Stylist" fetchpriority="high" />
+            <picture>
+              <source type="image/webp"
+                      srcset="/images/opt/kelly-hero-480.webp 480w, /images/opt/kelly-hero-840.webp 840w, /images/opt/kelly-hero-1200.webp 1200w"
+                      sizes="(max-width: 960px) 320px, 420px" />
+              <img class="hero__photo" src="/images/KellyWelshpicked2024_19.jpg" alt="Kelly Harvey-Welsh - Personal Stylist" width="1600" height="2400" fetchpriority="high" />
+            </picture>
           </figure>
 
           <div class="hero__content">
@@ -1620,7 +1633,10 @@
       <!-- ============ About ============ -->
       <section id="about" class="about">
         <figure class="about__figure reveal">
-          <img class="about__photo" src="/images/KellyWelshpicked2024-removebg-preview.png" alt="Kelly Harvey-Welsh - Meet Your Stylist" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="/images/opt/kelly-about.webp" />
+            <img class="about__photo" src="/images/KellyWelshpicked2024-removebg-preview.png" alt="Kelly Harvey-Welsh - Meet Your Stylist" width="408" height="612" loading="lazy" />
+          </picture>
         </figure>
         <div class="about__story">
           <p class="eyebrow reveal">Meet Your Stylist</p>
@@ -1892,7 +1908,12 @@
         </div>
 
         <figure class="bridal__figure">
-          <img class="bridal__photo reveal" src="/images/CallyBorgSalonstyles2025_37_(2).jpeg" alt="Kelly Harvey-Welsh - Bridal Styling Consultation" loading="lazy" />
+          <picture>
+            <source type="image/webp"
+                    srcset="/images/opt/kelly-bridal-480.webp 480w, /images/opt/kelly-bridal-800.webp 800w"
+                    sizes="(max-width: 960px) 86vw, 400px" />
+            <img class="bridal__photo reveal" src="/images/CallyBorgSalonstyles2025_37_(2).jpeg" alt="Kelly Harvey-Welsh - Bridal Styling Consultation" width="1024" height="1536" loading="lazy" />
+          </picture>
         </figure>
       </section>
 
@@ -1956,7 +1977,10 @@
       <div class="site-footer__grid">
         <div>
           <div class="site-footer__brand">
-            <img src="/images/style-confident-logo.jpg" alt="Style Confident Logo" loading="lazy" />
+            <picture>
+              <source type="image/webp" srcset="/images/opt/logo-120.webp" />
+              <img src="/images/style-confident-logo.jpg" alt="Style Confident Logo" width="120" height="121" loading="lazy" />
+            </picture>
             <span>Style Confident</span>
           </div>
           <p class="site-footer__tagline">
@@ -2006,8 +2030,8 @@
       <div class="site-footer__bottom">
         <p>© 2026 Style Confident. All rights reserved.</p>
         <div class="site-footer__legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms</a>
         </div>
       </div>
     </footer>
