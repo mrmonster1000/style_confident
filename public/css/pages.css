@@ -1,0 +1,69 @@
+/* Shared styles for standalone content pages (area pages, M&S Battersea) */
+:root {
+  --ink: #2D2926;
+  --cream: #FAF7F4;
+  --coral: #E8614D;
+  --gold: #C9A962;
+  --stone: #7D756E;
+  --stone-light: #B8B2AA;
+  --bg: #FFFDFB;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.page-head {
+  border-bottom: 1px solid rgba(45, 41, 38, 0.06);
+  padding: 16px clamp(16px, 5vw, 48px);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.brand { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; }
+.brand img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
+.brand b { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 500; color: var(--ink); display: block; line-height: 1.1; }
+.brand small { font-family: 'Libre Franklin', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--stone); }
+.btn {
+  display: inline-block;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  text-decoration: none; color: #fff; background: var(--coral);
+  padding: 14px 26px; border-radius: 999px; white-space: nowrap;
+}
+.page-head .btn { padding: 11px 20px; }
+main { max-width: 760px; margin: 0 auto; padding: clamp(40px, 7vw, 80px) clamp(16px, 5vw, 48px) 64px; }
+.crumbs { font-family: 'Libre Franklin', sans-serif; font-size: 12px; color: var(--stone-light); margin-bottom: 28px; }
+.crumbs a { color: var(--stone); text-decoration: none; }
+.eyebrow { font-family: 'Libre Franklin', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--coral); margin-bottom: 16px; }
+h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 48px); font-weight: 500; line-height: 1.15; margin-bottom: 20px; }
+.lede { font-size: 21px; color: var(--ink); margin-bottom: 28px; }
+h2 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 500; margin: 44px 0 12px; }
+h3 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 500; margin-bottom: 4px; }
+p, li { font-size: 18px; color: var(--stone); margin-bottom: 14px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
+a { color: var(--coral); }
+.intro { display: grid; grid-template-columns: 1fr 180px; gap: 32px; align-items: start; }
+.intro img { width: 180px; height: 240px; object-fit: cover; border-radius: 90px 90px 6px 6px; }
+.services { list-style: none; padding: 0; display: grid; gap: 14px; margin: 18px 0 8px; }
+.services li { background: var(--cream); border-radius: 6px; padding: 18px 20px; margin: 0; }
+.services p { margin: 0; font-size: 17px; }
+.price { font-family: 'Libre Franklin', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: var(--coral); text-transform: uppercase; }
+.cta { background: var(--cream); border-radius: 8px; padding: 32px clamp(20px, 4vw, 36px); margin: 48px 0 8px; text-align: center; }
+.cta h2 { margin-top: 0; }
+.cta p { margin-bottom: 22px; }
+.note { font-size: 15px; color: var(--stone-light); border-left: 2px solid var(--gold); padding-left: 14px; margin-top: 28px; }
+.areas { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.areas li { margin: 0; }
+.areas a { display: inline-block; font-family: 'Libre Franklin', sans-serif; font-size: 13px; text-decoration: none; color: var(--ink); border: 1px solid rgba(45, 41, 38, 0.15); border-radius: 999px; padding: 8px 16px; }
+footer { border-top: 1px solid rgba(45, 41, 38, 0.06); padding: 24px 16px; text-align: center; font-family: 'Libre Franklin', sans-serif; font-size: 11px; color: var(--stone); }
+footer a { color: var(--stone); margin: 0 8px; }
+@media (max-width: 640px) {
+  .intro { grid-template-columns: 1fr; }
+  .intro img { order: -1; width: 140px; height: 186px; }
+  .page-head .btn { display: none; }
+}
+.services .price { font-size: 12px; margin: 2px 0 6px; }
+footer p { font-size: 12px; margin: 0; }
+.intro img { object-position: center 20%; }
