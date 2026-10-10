@@ -252,7 +252,7 @@ const AboutSection = ({ palette: p }) => (
         {[
           { label: 'Currently At', value: 'M&S Battersea Personal Stylist' },
           { label: 'Fashion Training', value: 'London College of Style' },
-          { label: 'TV Styling', value: 'This Morning, My Mum Your Dad' },
+          { label: 'TV Styling', value: 'This Morning' },
           { label: 'Previously', value: 'Owner, The Secret Dress House, Reigate (2013-2018)' }
         ].map((item, i) => (
           <div key={i}>
