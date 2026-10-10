@@ -31,4 +31,4 @@ User-agent: OAI-SearchBot
 Allow: /
 
 # Sitemaps
-Sitemap: https://styleconfident.com/sitemap.xml
+Sitemap: https://styleconfident.co.uk/sitemap.xml

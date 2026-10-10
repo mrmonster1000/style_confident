@@ -168,8 +168,8 @@ const Footer = ({ palette: p, onBookingClick }) => {
             color: p.neutralLight,
             marginBottom: '12px'
           }}>
-            <a href="mailto:hello@styleconfident.com" style={{ color: p.neutralLight, textDecoration: 'none' }}>
-              hello@styleconfident.com
+            <a href="mailto:kelly@styleconfident.co.uk" style={{ color: p.neutralLight, textDecoration: 'none' }}>
+              kelly@styleconfident.co.uk
             </a>
           </p>
           <p style={{
