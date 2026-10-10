@@ -64,8 +64,8 @@ const BookingModal = ({ isOpen, onClose, palette: p }) => {
             margin: 0
           }}>
             Prefer email? Contact me at{' '}
-            <a href="mailto:hello@styleconfident.com" style={{ color: p.accent1 }}>
-              hello@styleconfident.com
+            <a href="mailto:kelly@styleconfident.co.uk" style={{ color: p.accent1 }}>
+              kelly@styleconfident.co.uk
             </a>
           </p>
         </div>
